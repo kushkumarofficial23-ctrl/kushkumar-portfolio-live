@@ -25,6 +25,20 @@ import vDrink from "@/assets/smaple_ad.mp4.asset.json";
 import vJewelry from "@/assets/jewelry_palace.mp4.asset.json";
 import vPizza from "@/assets/chef_pizza.mp4.asset.json";
 import vPolo from "@/assets/polo_shirt.mp4.asset.json";
+import vCream from "@/assets/skincare_cream.mp4.asset.json";
+import vAlley from "@/assets/alley_fashion.mp4.asset.json";
+import vStorefront from "@/assets/storefront_aerial.mp4.asset.json";
+import vWatch from "@/assets/luxury_watch.mp4.asset.json";
+import iTshirt from "@/assets/premium_tshirt.png.asset.json";
+import iBelieve from "@/assets/believe_set.png.asset.json";
+import iSkin from "@/assets/skin_closeup.jpg.asset.json";
+import iJewellery from "@/assets/jewellery_bust.jpg.asset.json";
+import imgSkincare from "@/assets/work-skincare.jpg";
+import imgFashion from "@/assets/work-fashion.jpg";
+import imgBeverage from "@/assets/work-beverage.jpg";
+import imgTech from "@/assets/work-tech.jpg";
+import imgBeauty2 from "@/assets/work-beauty2.jpg";
+import imgFood from "@/assets/work-food.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -39,8 +53,11 @@ const FILTERS = [
   "Fashion & Apparel",
   "Food & Beverage",
   "Jewellery & Luxury",
+  "Local Business & Storefront",
+  "Tech & Gadgets",
   "Introduction",
 ] as const;
+
 
 const WORK = [
   {
@@ -113,6 +130,115 @@ const WORK = [
     metric: "Studio Grade",
     category: "Introduction",
   },
+  {
+    src: vCream.url,
+    title: "Skincare Crème Studio Spot",
+    tag: "Product Cinematic",
+    metric: "Studio Grade",
+    category: "Skincare & Beauty",
+  },
+  {
+    src: vAlley.url,
+    title: "Streetwear Alley Walk",
+    tag: "Cinematic Fashion",
+    metric: "Scroll-Stopper",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vStorefront.url,
+    title: "Aerial Storefront Reveal",
+    tag: "Local Business Promo",
+    metric: "Location Hook",
+    category: "Local Business & Storefront",
+  },
+  {
+    src: vWatch.url,
+    title: "Luxury Wristwatch Reveal",
+    tag: "Premium Product Film",
+    metric: "Luxury Edit",
+    category: "Jewellery & Luxury",
+  },
+  {
+    src: iSkin.url,
+    title: "Glass Skin Close-Up",
+    tag: "AI Beauty Visual",
+    metric: "Hero Still",
+    media: "image" as const,
+    category: "Skincare & Beauty",
+  },
+  {
+    src: iJewellery.url,
+    title: "Kundan Set on Velvet Bust",
+    tag: "Heritage Jewellery",
+    metric: "Campaign Still",
+    media: "image" as const,
+    category: "Jewellery & Luxury",
+  },
+  {
+    src: iTshirt.url,
+    title: "Premium Tee Poster",
+    tag: "Brand Poster",
+    metric: "Editorial",
+    media: "image" as const,
+    category: "Fashion & Apparel",
+  },
+  {
+    src: iBelieve.url,
+    title: "Believe Loungewear Lookbook",
+    tag: "AI Model Shoot",
+    metric: "Lookbook",
+    media: "image" as const,
+    category: "Fashion & Apparel",
+  },
+  {
+    src: imgSkincare,
+    title: "Serum Ritual Frame",
+    tag: "Product Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Skincare & Beauty",
+  },
+  {
+    src: imgBeauty2,
+    title: "Beauty Glow Concept",
+    tag: "AI Beauty Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Skincare & Beauty",
+  },
+  {
+    src: imgFashion,
+    title: "Apparel Street Concept",
+    tag: "AI Model Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Fashion & Apparel",
+  },
+  {
+    src: imgBeverage,
+    title: "Beverage Splash Still",
+    tag: "Product Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Food & Beverage",
+  },
+  {
+    src: imgFood,
+    title: "Food Craving Still",
+    tag: "Product Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Food & Beverage",
+  },
+  {
+    src: imgTech,
+    title: "Gadget Hero Still",
+    tag: "Tech Product Visual",
+    metric: "Concept Still",
+    media: "image" as const,
+    category: "Tech & Gadgets",
+  },
+
 ];
 
 const SERVICES = [
