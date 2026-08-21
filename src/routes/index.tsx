@@ -218,15 +218,6 @@ function Index() {
               View Selected Work
               <ArrowUpRight className="h-4 w-4" />
             </a>
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur-md transition-colors hover:border-accent hover:text-accent"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Book a Project via WhatsApp
-            </a>
           </div>
 
           <dl className="mt-12 flex flex-wrap gap-x-10 gap-y-4">
@@ -294,7 +285,7 @@ function Index() {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((w) => (
-            <PhoneCard key={w.title} {...w} />
+            <VideoCard key={w.title} {...w} />
           ))}
         </div>
       </section>
