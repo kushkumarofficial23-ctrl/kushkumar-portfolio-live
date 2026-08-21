@@ -158,7 +158,7 @@ function Index() {
             Available for Brand Campaigns • 2026
           </span>
 
-          <h1 className="mt-7 font-display text-5xl font-extrabold leading-[1.03] sm:text-6xl lg:text-7xl">
+          <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
             <span className="text-gradient">AI-Powered UGC Ads</span>
             <br />
             That Stop The Scroll & Scale Brands.
@@ -229,7 +229,7 @@ function Index() {
       {/* Work */}
       <section id="work" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <h2 className="font-display text-4xl font-extrabold sm:text-5xl">Selected Work</h2>
+          <h2 className="font-display text-3xl font-extrabold sm:text-4xl">Selected Work</h2>
           <p className="max-w-sm text-sm text-muted-foreground">
             Vertical-first creative built for Reels, TikTok and Meta ad accounts.
           </p>
@@ -260,7 +260,7 @@ function Index() {
 
       {/* Services */}
       <section id="services" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
-        <h2 className="font-display text-4xl font-extrabold sm:text-5xl">
+        <h2 className="font-display text-3xl font-extrabold sm:text-4xl">
           Services & Capabilities
         </h2>
 
@@ -324,7 +324,7 @@ function Index() {
           </div>
 
           <div>
-            <h2 className="font-display text-4xl font-extrabold sm:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold sm:text-4xl">
               Creative that behaves like a growth channel.
             </h2>
             <ul className="mt-8 space-y-5">
@@ -348,7 +348,7 @@ function Index() {
       <section id="contact" className="relative z-10 mx-auto max-w-6xl px-6 py-24">
         <div className="glass grid gap-12 p-8 sm:p-12 lg:grid-cols-2">
           <div>
-            <h2 className="font-display text-4xl font-extrabold leading-tight sm:text-5xl">
+            <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
               Let's build your next top-performing ad campaign.
             </h2>
             <p className="mt-5 text-muted-foreground">
