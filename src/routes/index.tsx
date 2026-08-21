@@ -25,6 +25,20 @@ import vDrink from "@/assets/smaple_ad.mp4.asset.json";
 import vJewelry from "@/assets/jewelry_palace.mp4.asset.json";
 import vPizza from "@/assets/chef_pizza.mp4.asset.json";
 import vPolo from "@/assets/polo_shirt.mp4.asset.json";
+import vCream from "@/assets/skincare_cream.mp4.asset.json";
+import vAlley from "@/assets/alley_fashion.mp4.asset.json";
+import vStorefront from "@/assets/storefront_aerial.mp4.asset.json";
+import vWatch from "@/assets/luxury_watch.mp4.asset.json";
+import iTshirt from "@/assets/premium_tshirt.png.asset.json";
+import iBelieve from "@/assets/believe_set.png.asset.json";
+import iSkin from "@/assets/skin_closeup.jpg.asset.json";
+import iJewellery from "@/assets/jewellery_bust.jpg.asset.json";
+import imgSkincare from "@/assets/work-skincare.jpg";
+import imgFashion from "@/assets/work-fashion.jpg";
+import imgBeverage from "@/assets/work-beverage.jpg";
+import imgTech from "@/assets/work-tech.jpg";
+import imgBeauty2 from "@/assets/work-beauty2.jpg";
+import imgFood from "@/assets/work-food.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -39,8 +53,11 @@ const FILTERS = [
   "Fashion & Apparel",
   "Food & Beverage",
   "Jewellery & Luxury",
+  "Local Business & Storefront",
+  "Tech & Gadgets",
   "Introduction",
 ] as const;
+
 
 const WORK = [
   {
