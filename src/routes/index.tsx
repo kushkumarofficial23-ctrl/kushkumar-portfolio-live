@@ -167,11 +167,14 @@ function Index() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[900px] grid-lines opacity-40" />
 
       {/* Nav */}
-      <header className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <span className="font-display text-lg font-extrabold tracking-tight">
-          KUSH<span className="text-accent">.</span>
-        </span>
-        <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
+      <header className="relative z-10 mx-auto max-w-6xl px-6 py-8 text-center">
+        <h2 className="font-display text-3xl font-extrabold uppercase tracking-[0.35em] sm:text-4xl">
+          <span className="text-gradient">KUSH KUMAR</span>
+        </h2>
+        <p className="mt-2 text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
+          AI UGC Creator & Social Media Marketer
+        </p>
+        <nav className="mt-6 hidden justify-center gap-8 text-sm text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#work">
             Work
           </a>
@@ -186,6 +189,7 @@ function Index() {
           </a>
         </nav>
       </header>
+
 
       {/* Hero */}
       <section className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
