@@ -12,15 +12,19 @@ import {
   Video,
 } from "lucide-react";
 
-import { PhoneCard } from "@/components/portfolio/PhoneCard";
 import heroUgc from "@/assets/hero-ugc.jpg";
 import creatorProfile from "@/assets/creator-profile.jpg";
-import workSkincare from "@/assets/work-skincare.jpg";
-import workFashion from "@/assets/work-fashion.jpg";
-import workBeverage from "@/assets/work-beverage.jpg";
-import workTech from "@/assets/work-tech.jpg";
-import workBeauty2 from "@/assets/work-beauty2.jpg";
-import workFood from "@/assets/work-food.jpg";
+import { VideoCard } from "@/components/portfolio/VideoCard";
+import vIceCream from "@/assets/0821.mp4.asset.json";
+import vAcne from "@/assets/0821_1.mp4.asset.json";
+import vLeaf from "@/assets/0821_2.mp4.asset.json";
+import vIntro from "@/assets/0821_3.mp4.asset.json";
+import vSoda from "@/assets/soda_ad.mp4.asset.json";
+import vCafe from "@/assets/cafe_ad_2.mp4.asset.json";
+import vDrink from "@/assets/smaple_ad.mp4.asset.json";
+import vJewelry from "@/assets/jewelry_palace.mp4.asset.json";
+import vPizza from "@/assets/chef_pizza.mp4.asset.json";
+import vPolo from "@/assets/polo_shirt.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,51 +38,80 @@ const FILTERS = [
   "Skincare & Beauty",
   "Fashion & Apparel",
   "Food & Beverage",
-  "Tech & DTC",
+  "Jewellery & Luxury",
+  "Introduction",
 ] as const;
 
 const WORK = [
   {
-    image: workSkincare,
-    title: "Glow Serum Routine Ad",
-    tag: "Skincare Routine Ad",
-    metric: "+3.8x ROAS",
-    category: "Skincare & Beauty",
-  },
-  {
-    image: workFashion,
-    title: "Streetwear Drop Teaser",
-    tag: "Meta & Reels Ready",
-    metric: "150k+ Views",
-    category: "Fashion & Apparel",
-  },
-  {
-    image: workBeverage,
-    title: "Energy Can Hook Test",
-    tag: "3s Scroll-Stopper",
-    metric: "Viral Hook",
-    category: "Food & Beverage",
-  },
-  {
-    image: workTech,
-    title: "Earbuds Product Reveal",
-    tag: "Studio Product Visual",
-    metric: "+2.4x CTR",
-    category: "Tech & DTC",
-  },
-  {
-    image: workBeauty2,
-    title: "Unboxing Testimonial",
+    src: vAcne.url,
+    title: "Acne Care Testimonial",
     tag: "Creator-Style UGC",
     metric: "9.1% CVR",
     category: "Skincare & Beauty",
   },
   {
-    image: workFood,
-    title: "Smash Burger Craving Ad",
-    tag: "TikTok Native Edit",
+    src: vLeaf.url,
+    title: "Natural Skincare Cinematic",
+    tag: "Cinematic B-Roll",
+    metric: "Brand Film",
+    category: "Skincare & Beauty",
+  },
+  {
+    src: vPolo.url,
+    title: "Polo Shirt Lookbook",
+    tag: "AI Model Showcase",
+    metric: "+2.4x CTR",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vJewelry.url,
+    title: "Palace Jewellery Campaign",
+    tag: "Luxury Brand Film",
+    metric: "Premium Edit",
+    category: "Jewellery & Luxury",
+  },
+  {
+    src: vIceCream.url,
+    title: "Caramel Ice Cream Pour",
+    tag: "Food Close-Up",
+    metric: "Craving Hook",
+    category: "Food & Beverage",
+  },
+  {
+    src: vPizza.url,
+    title: "Chef Chicken Pizza Ad",
+    tag: "Restaurant Promo",
     metric: "410k+ Views",
     category: "Food & Beverage",
+  },
+  {
+    src: vSoda.url,
+    title: "Soda Splash Ad",
+    tag: "3s Scroll-Stopper",
+    metric: "Viral Hook",
+    category: "Food & Beverage",
+  },
+  {
+    src: vCafe.url,
+    title: "Cafe Vibes Reel",
+    tag: "Local Brand Reel",
+    metric: "+3.1x Reach",
+    category: "Food & Beverage",
+  },
+  {
+    src: vDrink.url,
+    title: "Pink Drink Review",
+    tag: "Talking-Head UGC",
+    metric: "+3.8x ROAS",
+    category: "Food & Beverage",
+  },
+  {
+    src: vIntro.url,
+    title: "Brand Introduction Spot",
+    tag: "AI Spokesperson",
+    metric: "Studio Grade",
+    category: "Introduction",
   },
 ];
 
@@ -134,11 +167,14 @@ function Index() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[900px] grid-lines opacity-40" />
 
       {/* Nav */}
-      <header className="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <span className="font-display text-lg font-extrabold tracking-tight">
-          KUSH<span className="text-accent">.</span>
-        </span>
-        <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
+      <header className="relative z-10 mx-auto max-w-6xl px-6 py-8 text-center">
+        <h2 className="font-display text-3xl font-extrabold uppercase tracking-[0.35em] sm:text-4xl">
+          <span className="text-gradient">KUSH KUMAR</span>
+        </h2>
+        <p className="mt-2 text-[11px] uppercase tracking-[0.4em] text-muted-foreground">
+          AI UGC Creator & Social Media Marketer
+        </p>
+        <nav className="mt-6 hidden justify-center gap-8 text-sm text-muted-foreground md:flex">
           <a className="transition-colors hover:text-foreground" href="#work">
             Work
           </a>
@@ -153,6 +189,7 @@ function Index() {
           </a>
         </nav>
       </header>
+
 
       {/* Hero */}
       <section className="relative z-10 mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-10 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
@@ -180,15 +217,6 @@ function Index() {
             >
               View Selected Work
               <ArrowUpRight className="h-4 w-4" />
-            </a>
-            <a
-              href={WHATSAPP}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur-md transition-colors hover:border-accent hover:text-accent"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Book a Project via WhatsApp
             </a>
           </div>
 
@@ -257,7 +285,7 @@ function Index() {
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {visible.map((w) => (
-            <PhoneCard key={w.title} {...w} />
+            <VideoCard key={w.title} {...w} />
           ))}
         </div>
       </section>
