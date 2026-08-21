@@ -88,24 +88,28 @@ const SERVICES = [
     title: "AI UGC Video Production",
     body: "High-energy, authentic creator-style videos built with advanced AI workflows without hiring expensive physical talent.",
     large: true,
+    wide: false,
   },
   {
     icon: Camera,
     title: "Virtual Product Photography",
     body: "Studio-quality product shots in aesthetic lifestyle environments.",
     large: false,
+    wide: false,
   },
   {
     icon: TrendingUp,
     title: "Social Media Strategy",
     body: "Viral hook writing, content calendar orchestration, and paid ad creative testing.",
     large: false,
+    wide: false,
   },
   {
     icon: Gauge,
     title: "Speed & Scale",
     body: "Fast turnaround, A/B test variations, and platform-specific formatting.",
     large: false,
+    wide: true,
   },
 ];
 
@@ -265,11 +269,11 @@ function Index() {
         </h2>
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map(({ icon: Icon, title, body, large }) => (
+          {SERVICES.map(({ icon: Icon, title, body, large, wide }) => (
             <div
               key={title}
               className={`glass group relative overflow-hidden p-8 transition-colors hover:border-primary ${
-                large ? "lg:col-span-2 lg:row-span-2 lg:p-10" : ""
+                large ? "lg:col-span-2 lg:row-span-2 lg:p-10" : wide ? "lg:col-span-2" : ""
               }`}
             >
               <Icon className={`text-accent ${large ? "h-9 w-9" : "h-7 w-7"}`} />
