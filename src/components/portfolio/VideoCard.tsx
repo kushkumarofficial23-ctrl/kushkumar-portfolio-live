@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { cdn } from "@/lib/cdn";
 
 type Props = {
   src: string;
