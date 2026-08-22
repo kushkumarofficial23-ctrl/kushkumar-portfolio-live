@@ -9,8 +9,9 @@ type Props = {
   media?: "video" | "image";
 };
 
-export function VideoCard({ src, title, tag, metric, media = "video" }: Props) {
+export function VideoCard({ src: rawSrc, title, tag, metric, media = "video" }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
+  const src = cdn(rawSrc);
 
   return (
     <article
