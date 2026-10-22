@@ -6,20 +6,20 @@ type Props = {
   title: string;
   tag: string;
   metric: string;
+  lens?: string;
   media?: "video" | "image";
 };
 
-export function VideoCard({ src: rawSrc, title, tag, metric, media = "video" }: Props) {
+export function VideoCard({ src: rawSrc, title, tag, metric, lens, media = "video" }: Props) {
   const ref = useRef<HTMLVideoElement>(null);
   const src = cdn(rawSrc);
 
   return (
-    <article
-      className="group relative overflow-hidden rounded-[2rem] border border-border bg-surface p-2 backdrop-blur-md transition-transform duration-500 hover:-translate-y-2"
-      onMouseEnter={() => media === "video" && void ref.current?.play()}
-      onMouseLeave={() => media === "video" && ref.current?.pause()}
-    >
-      <div className="relative overflow-hidden rounded-[1.6rem]">
+    <article className="cinema-card cinema-card-hover group overflow-hidden p-2 transition-transform duration-500 hover:-translate-y-2">
+      <div
+        className="relative overflow-hidden rounded-[1.6rem]"
+        style={{ transform: "translateZ(0)" }}
+      >
         {media === "image" ? (
           <img
             src={src}
@@ -42,15 +42,22 @@ export function VideoCard({ src: rawSrc, title, tag, metric, media = "video" }: 
 
         <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-background/70 to-transparent" />
 
-        <span className="pointer-events-none absolute right-3 top-3 rounded-full border border-border bg-background/70 px-3 py-1 text-xs font-semibold text-accent backdrop-blur-md">
+        <span className="mono-tag pointer-events-none absolute right-3 top-3 rounded-full border border-gold/30 bg-background/75 px-3 py-1.5 text-gold backdrop-blur-md">
           {metric}
         </span>
-        <span className="pointer-events-none absolute left-3 top-3 inline-block rounded-full border border-border bg-background/70 px-3 py-1 text-[11px] uppercase tracking-widest text-muted-foreground backdrop-blur-md">
+        <span className="mono-tag pointer-events-none absolute left-3 top-3 inline-block max-w-[70%] rounded-full border border-border bg-background/75 px-3 py-1.5 text-muted-foreground backdrop-blur-md">
           {tag}
         </span>
+        {lens && (
+          <span className="mono-tag pointer-events-none absolute inset-x-3 bottom-3 rounded-lg border border-border bg-background/70 px-2.5 py-1.5 text-center text-amber-glow backdrop-blur-md">
+            {lens}
+          </span>
+        )}
       </div>
-      <h3 className="px-3 pb-2 pt-3 text-sm font-bold leading-tight text-foreground">{title}</h3>
-      <div className="pointer-events-none absolute inset-0 rounded-[2rem] opacity-0 transition-opacity duration-500 group-hover:opacity-100 glow-ring" />
+      <h3 className="px-3 pb-1 pt-3 text-sm font-bold leading-tight text-foreground">{title}</h3>
+      <div className="mono-tag px-3 pb-3 pt-0.5 text-muted-foreground">
+        {media === "image" ? "Campaign Plate" : "Commercial 9:16"}
+      </div>
     </article>
   );
 }
