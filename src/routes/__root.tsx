@@ -78,18 +78,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kush Kumar — AI UGC Creator & Social Media Marketer" },
+      {
+        title: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab",
+      },
       {
         name: "description",
         content:
-          "AI-powered UGC video ads, virtual product photography and social growth strategy for DTC brands.",
+          "Turn your existing studio photos into 3 high-converting 9:16 video ads in 48 hours. 100% real product lock, zero inventory shipping, from ₹3,499.",
       },
       { name: "author", content: "Kush Kumar" },
-      { property: "og:title", content: "Kush Kumar — AI UGC Creator & Social Media Marketer" },
+      {
+        property: "og:title",
+        content: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab",
+      },
       {
         property: "og:description",
         content:
-          "AI-powered UGC video ads, virtual product photography and social growth strategy for DTC brands.",
+          "3 scroll-stopping 9:16 commercial video ads from your existing studio photos — delivered in 48 hours with 100% real product fidelity.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -99,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap",
       },
       {
         rel: "stylesheet",
