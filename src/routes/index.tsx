@@ -48,6 +48,12 @@ import imgBeverage from "@/assets/work-beverage.jpg";
 import imgTech from "@/assets/work-tech.jpg";
 import imgBeauty2 from "@/assets/work-beauty2.jpg";
 import imgFood from "@/assets/work-food.jpg";
+import vTea from "@/assets/tea_testimonial.mp4.asset.json";
+import vOats from "@/assets/oats_review.mp4.asset.json";
+import vKurtaWalk from "@/assets/kurta_heritage_walk.mp4.asset.json";
+import vChikankariHanger from "@/assets/chikankari_hanger.mp4.asset.json";
+import vChikankariMacro from "@/assets/chikankari_macro.mp4.asset.json";
+import vKurtaModel from "@/assets/kurta_model.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -293,6 +299,54 @@ const WORK = [
     lens: "3800K Studio Key",
     media: "image" as const,
     category: "Tech & Gadgets",
+  },
+  {
+    src: vTea.url,
+    title: "Taj Mahal Tea Testimonial",
+    tag: "LIP-SYNC BOOKEND HOOK",
+    metric: "FMCG TESTIMONIAL FILM",
+    lens: "3800K Studio Key",
+    category: "Food & Beverage",
+  },
+  {
+    src: vOats.url,
+    title: "Protein Oats UGC Review",
+    tag: "FOUNDER-STYLE UGC HOOK",
+    metric: "KITCHEN DEMO PLATE",
+    lens: "24mm Gimbal Motion",
+    category: "Food & Beverage",
+  },
+  {
+    src: vKurtaWalk.url,
+    title: "Heritage Kurta Walk",
+    tag: "100% GARMENT WEAVE LOCK",
+    metric: "HERITAGE WALK FILM",
+    lens: "24mm Gimbal Motion",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vChikankariHanger.url,
+    title: "Chikankari Hanger Reveal",
+    tag: "CHIKANKARI EMBROIDERY LOCK",
+    metric: "SHOWROOM DRAPE FILM",
+    lens: "3800K Studio Key",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vChikankariMacro.url,
+    title: "Chikankari Embroidery Macro",
+    tag: "85MM MACRO EMBROIDERY LOCK",
+    metric: "STITCH-LEVEL PROOF PLATE",
+    lens: "ARRI Alexa 85mm Macro",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vKurtaModel.url,
+    title: "Maroon Kurta Showcase",
+    tag: "VIRTUAL STUDIO PRODUCTION",
+    metric: "MODEL SHOWCASE FILM",
+    lens: "3800K Studio Key",
+    category: "Fashion & Apparel",
   },
 ];
 
