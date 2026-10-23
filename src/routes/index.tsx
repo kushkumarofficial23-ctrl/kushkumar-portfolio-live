@@ -48,6 +48,12 @@ import imgBeverage from "@/assets/work-beverage.jpg";
 import imgTech from "@/assets/work-tech.jpg";
 import imgBeauty2 from "@/assets/work-beauty2.jpg";
 import imgFood from "@/assets/work-food.jpg";
+import vTea from "@/assets/tea_testimonial.mp4.asset.json";
+import vOats from "@/assets/oats_review.mp4.asset.json";
+import vKurtaWalk from "@/assets/kurta_heritage_walk.mp4.asset.json";
+import vChikankariHanger from "@/assets/chikankari_hanger.mp4.asset.json";
+import vChikankariMacro from "@/assets/chikankari_macro.mp4.asset.json";
+import vKurtaModel from "@/assets/kurta_model.mp4.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -75,10 +81,10 @@ export const Route = createFileRoute("/")({
 });
 
 /* Existing contact details kept 100% intact */
-const WHATSAPP = "https://wa.me/919000000000";
+const WHATSAPP = "https://wa.me/917073777605";
 const EMAIL = "kushkumarofficial06@gmail.com";
-const PHONE_DISPLAY = "+91 80944 47552";
-const PHONE_TEL = "tel:+918094447552";
+const PHONE_DISPLAY = "+91 70737 77605";
+const PHONE_TEL = "tel:+917073777605";
 
 const FILTERS = [
   "All",
@@ -294,6 +300,54 @@ const WORK = [
     media: "image" as const,
     category: "Tech & Gadgets",
   },
+  {
+    src: vTea.url,
+    title: "Taj Mahal Tea Testimonial",
+    tag: "LIP-SYNC BOOKEND HOOK",
+    metric: "FMCG TESTIMONIAL FILM",
+    lens: "3800K Studio Key",
+    category: "Food & Beverage",
+  },
+  {
+    src: vOats.url,
+    title: "Protein Oats UGC Review",
+    tag: "FOUNDER-STYLE UGC HOOK",
+    metric: "KITCHEN DEMO PLATE",
+    lens: "24mm Gimbal Motion",
+    category: "Food & Beverage",
+  },
+  {
+    src: vKurtaWalk.url,
+    title: "Heritage Kurta Walk",
+    tag: "100% GARMENT WEAVE LOCK",
+    metric: "HERITAGE WALK FILM",
+    lens: "24mm Gimbal Motion",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vChikankariHanger.url,
+    title: "Chikankari Hanger Reveal",
+    tag: "CHIKANKARI EMBROIDERY LOCK",
+    metric: "SHOWROOM DRAPE FILM",
+    lens: "3800K Studio Key",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vChikankariMacro.url,
+    title: "Chikankari Embroidery Macro",
+    tag: "85MM MACRO EMBROIDERY LOCK",
+    metric: "STITCH-LEVEL PROOF PLATE",
+    lens: "ARRI Alexa 85mm Macro",
+    category: "Fashion & Apparel",
+  },
+  {
+    src: vKurtaModel.url,
+    title: "Maroon Kurta Showcase",
+    tag: "VIRTUAL STUDIO PRODUCTION",
+    metric: "MODEL SHOWCASE FILM",
+    lens: "3800K Studio Key",
+    category: "Fashion & Apparel",
+  },
 ];
 
 const HERO_PILLS = [
@@ -326,7 +380,7 @@ const TIMELINE = [
     label: "DIRECT CONVERSION CTA",
     detail: "Engineered for Meta Advantage+ & Reels ROAS",
   },
-];
+] as const;
 
 const CAPABILITIES = [
   {
@@ -393,7 +447,7 @@ const COMPARISON = {
       "Upfront Cost & Risk",
       "₹40,000–₹80,000 per shoot day (studio rent, model, MUA)",
       "₹30,000+/mo fixed retainer + 3-month lock-in",
-      "₹3,499 ($250) 3-Ad Validation Batch — Zero lock-in risk",
+      "₹3,499 / $3,499 3-Ad Validation Batch — Zero lock-in risk",
     ],
     [
       "Deliverable Output",
@@ -429,7 +483,7 @@ const TIERS = [
     name: "48-Hour 3-Ad Validation Batch",
     badge: "TEST FIRST, SCALE SECOND",
     popular: true,
-    price: { INR: "₹3,499", USD: "$250" },
+    price: { INR: "₹3,499", USD: "$3,499" },
     note: "One-Time Validation Batch (No Retainer Lock-In)",
     features: [
       "3 × Custom 9:16 Vertical Commercial Video Ads (20s–30s)",
@@ -445,7 +499,7 @@ const TIERS = [
     name: "Starter Creative Testing Sprint",
     badge: null,
     popular: false,
-    price: { INR: "₹18,000", USD: "$350" },
+    price: { INR: "₹18,000", USD: "$18,000" },
     note: "2 Hero Concepts + 4 Modular Hooks (6 Ad Assets Total)",
     features: [
       "2 Complete Hero Video Concepts + 4 Modular 3-Second Hook Variations (6 Ad Assets Total)",
@@ -459,7 +513,7 @@ const TIERS = [
     name: "Monthly Performance Creative Retainer",
     badge: null,
     popular: false,
-    price: { INR: "₹35,000/mo", USD: "$1,500/mo" },
+    price: { INR: "₹35,000/mo", USD: "$35,000/mo" },
     note: "Replaces ₹50,000–₹80,000/mo in physical studio shoots",
     features: [
       "15 Custom 9:16 Commercial Video Ads Every Month",
@@ -585,7 +639,7 @@ function Index() {
                   href="#pricing"
                   className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold uppercase tracking-wide transition-transform hover:-translate-y-0.5 gold-ring"
                 >
-                  Start ₹3,499 / $250 3-Ad Validation Batch
+                  Start ₹3,499 / $3,499 3-Ad Validation Batch
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
                 <a
@@ -982,10 +1036,10 @@ function Index() {
                 <option value="" disabled>
                   Budget / Package Selection
                 </option>
-                <option value="validation">₹3,499 ($250) — 48-Hour 3-Ad Validation Batch</option>
-                <option value="sprint">₹18,000 ($350) — Starter Creative Testing Sprint</option>
+                <option value="validation">₹3,499 / $3,499 — 48-Hour 3-Ad Validation Batch</option>
+                <option value="sprint">₹18,000 / $18,000 — Starter Creative Testing Sprint</option>
                 <option value="retainer">
-                  ₹35,000/mo ($1,500/mo) — 15-Ad Monthly Retainer
+                  ₹35,000/mo / $35,000/mo — 15-Ad Monthly Retainer
                 </option>
                 <option value="custom">Custom Multi-SKU Festive Campaign</option>
               </select>
