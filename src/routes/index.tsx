@@ -54,6 +54,9 @@ import vKurtaWalk from "@/assets/kurta_heritage_walk.mp4.asset.json";
 import vChikankariHanger from "@/assets/chikankari_hanger.mp4.asset.json";
 import vChikankariMacro from "@/assets/chikankari_macro.mp4.asset.json";
 import vKurtaModel from "@/assets/kurta_model.mp4.asset.json";
+import vWhey from "@/assets/whey_gold_gym.mp4.asset.json";
+import vF1 from "@/assets/f1_hyperspeed_track.mp4.asset.json";
+import iAttar from "@/assets/attar_bottles_abrar.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -92,6 +95,7 @@ const FILTERS = [
   "Fashion & Apparel",
   "Food & Beverage",
   "Jewellery & Luxury",
+  "Attar & Fragrance",
   "Local Business & Storefront",
   "Tech & Gadgets",
   "Introduction",
@@ -347,6 +351,31 @@ const WORK = [
     metric: "MODEL SHOWCASE FILM",
     lens: "3800K Studio Key",
     category: "Fashion & Apparel",
+  },
+  {
+    src: vWhey.url,
+    title: "Gold Whey Gym Reveal",
+    tag: "ZERO-DRIFT PACKAGING LOCK",
+    metric: "SMOKE RIG REVEAL FILM",
+    lens: "3800K Studio Key",
+    category: "Food & Beverage",
+  },
+  {
+    src: vF1.url,
+    title: "Hyperspeed F1 Track Plate",
+    tag: "HYPERSPEED TRACK CAMERA PLATE",
+    metric: "MOTORSPORT NIGHT FILM",
+    lens: "Telephoto Track Follow",
+    category: "Local Business & Storefront",
+  },
+  {
+    src: iAttar.url,
+    title: "Al Abrar Attar Duo",
+    tag: "GOLD CAP & LABEL TYPOGRAPHY LOCK",
+    metric: "HERITAGE FRAGRANCE PLATE",
+    lens: "3800K Studio Key",
+    media: "image" as const,
+    category: "Attar & Fragrance",
   },
 ];
 
