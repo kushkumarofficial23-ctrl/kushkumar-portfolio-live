@@ -21,42 +21,42 @@ import {
 import heroUgc from "@/assets/hero-ugc.jpg";
 import { VideoCard } from "@/components/portfolio/VideoCard";
 import { Reveal, Tilt } from "@/components/portfolio/motion";
-import sareeHeritage from "@/assets/saree_heritage.jpg.asset.json";
-import kundanSilver from "@/assets/kundan_silver.jpg.asset.json";
-import virtualStudio from "@/assets/virtual_studio_render.jpg.asset.json";
-import vIceCream from "@/assets/0821.mp4.asset.json";
-import vAcne from "@/assets/0821_1.mp4.asset.json";
-import vLeaf from "@/assets/0821_2.mp4.asset.json";
-import vIntro from "@/assets/0821_3.mp4.asset.json";
-import vSoda from "@/assets/soda_ad.mp4.asset.json";
-import vCafe from "@/assets/cafe_ad_2.mp4.asset.json";
-import vDrink from "@/assets/smaple_ad.mp4.asset.json";
-import vJewelry from "@/assets/jewelry_palace.mp4.asset.json";
-import vPizza from "@/assets/chef_pizza.mp4.asset.json";
-import vPolo from "@/assets/polo_shirt.mp4.asset.json";
-import vCream from "@/assets/skincare_cream.mp4.asset.json";
-import vAlley from "@/assets/alley_fashion.mp4.asset.json";
-import vStorefront from "@/assets/storefront_aerial.mp4.asset.json";
-import vWatch from "@/assets/luxury_watch.mp4.asset.json";
-import iTshirt from "@/assets/premium_tshirt.png.asset.json";
-import iBelieve from "@/assets/believe_set.png.asset.json";
-import iSkin from "@/assets/skin_closeup.jpg.asset.json";
-import iJewellery from "@/assets/jewellery_bust.jpg.asset.json";
+import sareeHeritage from "@/assets/saree_heritage.jpg";
+import kundanSilver from "@/assets/kundan_silver.jpg";
+import virtualStudio from "@/assets/virtual_studio_render.jpg";
+import vIceCream from "@/assets/0821.mp4";
+import vAcne from "@/assets/0821_1.mp4";
+import vLeaf from "@/assets/0821_2.mp4";
+import vIntro from "@/assets/0821_3.mp4";
+import vSoda from "@/assets/soda_ad.mp4";
+import vCafe from "@/assets/cafe_ad_2.mp4";
+import vDrink from "@/assets/smaple_ad.mp4";
+import vJewelry from "@/assets/jewelry_palace.mp4";
+import vPizza from "@/assets/chef_pizza.mp4";
+import vPolo from "@/assets/polo_shirt.mp4";
+import vCream from "@/assets/skincare_cream.mp4";
+import vAlley from "@/assets/alley_fashion.mp4";
+import vStorefront from "@/assets/storefront_aerial.mp4";
+import vWatch from "@/assets/luxury_watch.mp4";
+import iTshirt from "@/assets/premium_tshirt.png";
+import iBelieve from "@/assets/believe_set.png";
+import iSkin from "@/assets/skin_closeup.jpg";
+import iJewellery from "@/assets/jewellery_bust.jpg";
 import imgSkincare from "@/assets/work-skincare.jpg";
 import imgFashion from "@/assets/work-fashion.jpg";
 import imgBeverage from "@/assets/work-beverage.jpg";
 import imgTech from "@/assets/work-tech.jpg";
 import imgBeauty2 from "@/assets/work-beauty2.jpg";
 import imgFood from "@/assets/work-food.jpg";
-import vTea from "@/assets/tea_testimonial.mp4.asset.json";
-import vOats from "@/assets/oats_review.mp4.asset.json";
-import vKurtaWalk from "@/assets/kurta_heritage_walk.mp4.asset.json";
-import vChikankariHanger from "@/assets/chikankari_hanger.mp4.asset.json";
-import vChikankariMacro from "@/assets/chikankari_macro.mp4.asset.json";
-import vKurtaModel from "@/assets/kurta_model.mp4.asset.json";
-import vWhey from "@/assets/whey_gold_gym.mp4.asset.json";
-import vF1 from "@/assets/f1_hyperspeed_track.mp4.asset.json";
-import iAttar from "@/assets/attar_bottles_abrar.png.asset.json";
+import vTea from "@/assets/tea_testimonial.mp4";
+import vOats from "@/assets/oats_review.mp4";
+import vKurtaWalk from "@/assets/kurta_heritage_walk.mp4";
+import vChikankariHanger from "@/assets/chikankari_hanger.mp4";
+import vChikankariMacro from "@/assets/chikankari_macro.mp4";
+import vKurtaModel from "@/assets/kurta_model.mp4";
+import vWhey from "@/assets/whey_gold_gym.mp4";
+import vF1 from "@/assets/f1_hyperspeed_track.mp4";
+import iAttar from "@/assets/attar_bottles_abrar.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -103,7 +103,7 @@ const FILTERS = [
 
 const WORK = [
   {
-    src: vAcne.url,
+    src: vAcne,
     title: "Acne Care Testimonial",
     tag: "LIP-SYNC BOOKEND HOOK",
     metric: "9.1% CVR ARCHITECTURE",
@@ -111,7 +111,7 @@ const WORK = [
     category: "Skincare & Beauty",
   },
   {
-    src: vLeaf.url,
+    src: vLeaf,
     title: "Natural Skincare Cinematic",
     tag: "85MM MACRO TEXTURE LOCK",
     metric: "4000K STUDIO FILM",
@@ -119,7 +119,7 @@ const WORK = [
     category: "Skincare & Beauty",
   },
   {
-    src: vPolo.url,
+    src: vPolo,
     title: "Polo Shirt Lookbook",
     tag: "100% GARMENT WEAVE LOCK",
     metric: "+2.4x CTR LOOKBOOK",
@@ -127,7 +127,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vJewelry.url,
+    src: vJewelry,
     title: "Palace Jewellery Campaign",
     tag: "HERITAGE HALLMARK & STONE LOCK",
     metric: "ROYAL CAMPAIGN FILM",
@@ -135,7 +135,7 @@ const WORK = [
     category: "Jewellery & Luxury",
   },
   {
-    src: vIceCream.url,
+    src: vIceCream,
     title: "Caramel Ice Cream Pour",
     tag: "HIGH-SPEED SENSORY MACRO",
     metric: "3S CRAVING HOOK",
@@ -143,7 +143,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vPizza.url,
+    src: vPizza,
     title: "Chef Chicken Pizza Ad",
     tag: "COMMERCIAL TABLETOP B-ROLL",
     metric: "410k+ ORGANIC & PAID REACH",
@@ -151,7 +151,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vSoda.url,
+    src: vSoda,
     title: "Soda Splash Ad",
     tag: "1/4000s FLUID PHYSICS",
     metric: "3S SCROLL-STOPPER",
@@ -159,7 +159,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vCafe.url,
+    src: vCafe,
     title: "Cafe Vibes Reel",
     tag: "AMBIENT FOLEY & PACING",
     metric: "+3.1x LOCAL REACH",
@@ -167,7 +167,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vDrink.url,
+    src: vDrink,
     title: "Pink Drink Review",
     tag: "VOICE-NOTE B-ROLL HYBRID",
     metric: "+3.8x ROAS ANGLE",
@@ -175,7 +175,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vIntro.url,
+    src: vIntro,
     title: "Brand Introduction Spot",
     tag: "FOUNDER-DIRECT HOOK",
     metric: "STUDIO COMMERCIAL GRADE",
@@ -183,7 +183,7 @@ const WORK = [
     category: "Introduction",
   },
   {
-    src: vCream.url,
+    src: vCream,
     title: "Skincare Crème Studio Spot",
     tag: "ZERO-DRIFT PACKAGING LOCK",
     metric: "LUXURY PEDESTAL FILM",
@@ -191,7 +191,7 @@ const WORK = [
     category: "Skincare & Beauty",
   },
   {
-    src: vAlley.url,
+    src: vAlley,
     title: "Streetwear Alley Walk",
     tag: "24MM GIMBAL MOTION",
     metric: "TRUE-TO-SAMPLE DRAPE",
@@ -199,7 +199,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vStorefront.url,
+    src: vStorefront,
     title: "Aerial Storefront Reveal",
     tag: "SPATIAL LOCATION HOOK",
     metric: "FOOTFALL CONVERSION AD",
@@ -207,7 +207,7 @@ const WORK = [
     category: "Local Business & Storefront",
   },
   {
-    src: vWatch.url,
+    src: vWatch,
     title: "Luxury Wristwatch Reveal",
     tag: "CHRONOGRAPH BEZEL MACRO",
     metric: "CHIAROSCURO RIM LIGHT",
@@ -215,7 +215,7 @@ const WORK = [
     category: "Jewellery & Luxury",
   },
   {
-    src: iSkin.url,
+    src: iSkin,
     title: "Glass Skin Close-Up",
     tag: "MICRO-PORE OPTICAL PORTRAIT",
     metric: "HERO CAMPAIGN STILL",
@@ -224,7 +224,7 @@ const WORK = [
     category: "Skincare & Beauty",
   },
   {
-    src: iJewellery.url,
+    src: iJewellery,
     title: "Kundan Set on Velvet Bust",
     tag: "100% KUNDAN & ZARI LOCK",
     metric: "HERITAGE JEWELLERY PLATE",
@@ -233,7 +233,7 @@ const WORK = [
     category: "Jewellery & Luxury",
   },
   {
-    src: iTshirt.url,
+    src: iTshirt,
     title: "Premium Tee Poster",
     tag: "FABRIC GSM & STITCH LOCK",
     metric: "EDITORIAL CAMPAIGN STILL",
@@ -242,7 +242,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: iBelieve.url,
+    src: iBelieve,
     title: "Believe Loungewear Lookbook",
     tag: "VIRTUAL STUDIO PRODUCTION",
     metric: "MULTI-ANGLE LOOKBOOK",
@@ -305,7 +305,7 @@ const WORK = [
     category: "Tech & Gadgets",
   },
   {
-    src: vTea.url,
+    src: vTea,
     title: "Taj Mahal Tea Testimonial",
     tag: "LIP-SYNC BOOKEND HOOK",
     metric: "FMCG TESTIMONIAL FILM",
@@ -313,7 +313,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vOats.url,
+    src: vOats,
     title: "Protein Oats UGC Review",
     tag: "FOUNDER-STYLE UGC HOOK",
     metric: "KITCHEN DEMO PLATE",
@@ -321,7 +321,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vKurtaWalk.url,
+    src: vKurtaWalk,
     title: "Heritage Kurta Walk",
     tag: "100% GARMENT WEAVE LOCK",
     metric: "HERITAGE WALK FILM",
@@ -329,7 +329,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vChikankariHanger.url,
+    src: vChikankariHanger,
     title: "Chikankari Hanger Reveal",
     tag: "CHIKANKARI EMBROIDERY LOCK",
     metric: "SHOWROOM DRAPE FILM",
@@ -337,7 +337,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vChikankariMacro.url,
+    src: vChikankariMacro,
     title: "Chikankari Embroidery Macro",
     tag: "85MM MACRO EMBROIDERY LOCK",
     metric: "STITCH-LEVEL PROOF PLATE",
@@ -345,7 +345,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vKurtaModel.url,
+    src: vKurtaModel,
     title: "Maroon Kurta Showcase",
     tag: "VIRTUAL STUDIO PRODUCTION",
     metric: "MODEL SHOWCASE FILM",
@@ -353,7 +353,7 @@ const WORK = [
     category: "Fashion & Apparel",
   },
   {
-    src: vWhey.url,
+    src: vWhey,
     title: "Gold Whey Gym Reveal",
     tag: "ZERO-DRIFT PACKAGING LOCK",
     metric: "SMOKE RIG REVEAL FILM",
@@ -361,7 +361,7 @@ const WORK = [
     category: "Food & Beverage",
   },
   {
-    src: vF1.url,
+    src: vF1,
     title: "Hyperspeed F1 Track Plate",
     tag: "HYPERSPEED TRACK CAMERA PLATE",
     metric: "MOTORSPORT NIGHT FILM",
@@ -369,7 +369,7 @@ const WORK = [
     category: "Local Business & Storefront",
   },
   {
-    src: iAttar.url,
+    src: iAttar,
     title: "Al Abrar Attar Duo",
     tag: "GOLD CAP & LABEL TYPOGRAPHY LOCK",
     metric: "HERITAGE FRAGRANCE PLATE",
@@ -417,14 +417,14 @@ const CAPABILITIES = [
     title: "48-Hour 3-Ad Conversion Validation Batch",
     body: "3 complete 9:16 commercial video ads testing 3 distinct hook archetypes (Skeptical Comparison, Visual Problem-Agitate, ASMR Sensory Craving) built from your existing product photos.",
     large: true,
-    image: virtualStudio.url,
+    image: virtualStudio,
   },
   {
     icon: Layers,
     title: "100% Real Product & Textile Lock Architecture",
     body: "Dual-keyframe optical locking ensures complex Banarasi/Chikankari weaves, Kundan/925 silver filigree, and skincare typography never morph or drift across frames.",
     large: false,
-    image: sareeHeritage.url,
+    image: sareeHeritage,
   },
   {
     icon: Mic,
@@ -438,7 +438,7 @@ const CAPABILITIES = [
     body: "Studio pedestal, raw botanical/material ingredient staging, lifestyle model integration, and heritage architectural environments in 4K resolution.",
     large: false,
     wide: true,
-    image: kundanSilver.url,
+    image: kundanSilver,
   },
 ];
 
