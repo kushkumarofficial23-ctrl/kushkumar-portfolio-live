@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 
 import heroUgc from "@/assets/hero-ugc.jpg";
+import creatorProfile from "@/assets/creator-profile.jpg";
 import { VideoCard } from "@/components/portfolio/VideoCard";
 import { Reveal, Tilt } from "@/components/portfolio/motion";
 import sareeHeritage from "@/assets/saree_heritage.jpg";
@@ -379,6 +380,11 @@ const WORK = [
   },
 ];
 
+const CREATOR_STORIES = WORK.filter(
+  ({ category, title }) =>
+    category === "Introduction" || /testimonial|review/i.test(title),
+);
+
 const HERO_PILLS = [
   { icon: Lock, text: "100% Real Product, Zari & Label Lock" },
   { icon: Camera, text: "85mm Macro Optical Physics (Zero Uncanny Look)" },
@@ -555,10 +561,11 @@ const TIERS = [
 ];
 
 const NAV_LINKS = [
-  ["Selected Work", "#work"],
-  ["Why Studios Fail", "#why"],
-  ["Hybrid Architecture", "#services"],
-  ["Pricing & Validation", "#pricing"],
+  ["Work", "#work"],
+  ["Creator Stories", "#stories"],
+  ["Approach", "#services"],
+  ["About", "#about"],
+  ["Pricing", "#pricing"],
   ["Contact", "#contact"],
 ] as const;
 
@@ -579,177 +586,93 @@ function Index() {
   }
 
   return (
-    <main className="relative min-h-screen overflow-x-hidden bg-background">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1000px] bg-spotlight" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[1000px] grid-lines opacity-30" />
+    <main className="editorial-page relative min-h-screen overflow-x-hidden bg-background">
 
       {/* Sticky 3D Glass Navigation */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background/70 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-3">
+      <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8 lg:px-12">
           <div className="shrink-0">
-            <p className="font-display text-lg font-extrabold uppercase tracking-[0.25em]">
-              <span className="text-gold-gradient">Kush Kumar</span>
+            <p className="font-display text-2xl font-bold uppercase">
+              <span className="text-foreground">Kush Kumar</span>
             </p>
-            <p className="mono-tag hidden text-muted-foreground lg:block">
-              Performance Creative Studio • Hybrid Virtual Production Lab
+            <p className="hidden text-xs text-muted-foreground sm:block">
+              Independent creative studio
             </p>
           </div>
 
-          <nav className="hidden items-center gap-7 text-sm text-muted-foreground xl:flex">
+          <nav aria-label="Main navigation" className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs text-muted-foreground sm:gap-x-5 sm:text-sm">
             {NAV_LINKS.map(([label, href]) => (
-              <a key={href} className="transition-colors hover:text-gold" href={href}>
+              <a key={href} className="transition-colors hover:text-primary" href={href}>
                 {label}
               </a>
             ))}
           </nav>
-
-          <div className="flex shrink-0 items-center gap-3">
-            <span className="hidden items-center gap-2 rounded-full border border-emerald-pulse/30 bg-surface px-3 py-1.5 md:inline-flex">
-              <span className="live-dot h-2 w-2 rounded-full" />
-              <span className="mono-tag text-emerald-pulse">48h Validation Slots Open</span>
-            </span>
-            <a
-              href="#pricing"
-              className="btn-gold hidden items-center gap-1.5 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wide transition-transform hover:-translate-y-0.5 gold-ring sm:inline-flex"
-            >
-              Book ₹3,499 Validation Batch
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
-          </div>
         </div>
       </header>
 
-      {/* Hero — 3D Spatial Virtual Production Stage */}
-      <section className="relative z-10 mx-auto max-w-7xl px-6 pb-20 pt-14 lg:pt-20">
-        <div className="grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
-          <div>
-            <Reveal>
-              <span className="mono-tag inline-flex items-center gap-2 rounded-full border border-gold/30 bg-surface px-4 py-2 text-gold backdrop-blur-md">
-                <Sparkles className="h-3.5 w-3.5" />
-                ⚡ Built for Founder-Led D2C Brands • Zero Inventory Shipping Required
-              </span>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <h1 className="mt-7 font-display text-4xl font-extrabold leading-[1.08] sm:text-5xl lg:text-[3.4rem]">
-                <span className="text-gold-gradient">
-                  Turn Your Existing Studio Photos Into 3 High-Converting 9:16 Video Ads in 48
-                  Hours.
-                </span>
-              </h1>
-            </Reveal>
-
-            <Reveal delay={0.16}>
-              <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                Stop burning ₹40,000–₹80,000 ($3,500+) and 3 weeks on physical studio reshoots that
-                only give you static catalog photos. We lock 100% of your real garment weave,
-                jewellery hallmark, and packaging geometry into studio-grade 9:16 commercial video
-                ads engineered with 3-second psychological hooks.
-              </p>
-            </Reveal>
-
-            <Reveal delay={0.22}>
-              <div className="mt-7 flex flex-wrap gap-2.5">
-                {HERO_PILLS.map(({ icon: Icon, text }) => (
-                  <span
-                    key={text}
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-xs font-medium text-foreground backdrop-blur-md"
-                  >
-                    <Icon className="h-3.5 w-3.5 text-gold" />
-                    {text}
-                  </span>
-                ))}
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.3}>
-              <div className="mt-9 flex flex-wrap gap-4">
-                <a
-                  href="#pricing"
-                  className="btn-gold inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold uppercase tracking-wide transition-transform hover:-translate-y-0.5 gold-ring"
-                >
-                  Start ₹3,499 / $36.85 3-Ad Validation Batch
-                  <ArrowUpRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#work"
-                  className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:text-gold"
-                >
-                  Explore 24+ Commercial Works
-                  <ArrowDown className="h-4 w-4" />
-                </a>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Interactive 3D Floating Triple-Phone Cinema Rig */}
-          <Reveal delay={0.15} className="relative flex justify-center [perspective:1400px]">
-            <div className="relative flex items-center justify-center">
-              {/* Left storyboard frame */}
-              <div className="animate-float absolute -left-24 hidden w-40 rotate-[-4deg] opacity-70 lg:block">
-                <div className="glass overflow-hidden rounded-[1.4rem] border-gold/20 p-3 [transform:rotateY(22deg)]">
-                  <p className="mono-tag text-gold">{TIMELINE[0].time}</p>
-                  <p className="mono-tag mt-1 text-foreground">{TIMELINE[0].label}</p>
-                  <p className="mono-tag mt-1.5 text-[0.6rem] text-muted-foreground">
-                    {TIMELINE[0].detail}
-                  </p>
-                </div>
-              </div>
-              {/* Right storyboard frame */}
-              <div
-                className="animate-float absolute -right-24 hidden w-40 rotate-[4deg] opacity-70 lg:block"
-                style={{ animationDelay: "-3s" }}
-              >
-                <div className="glass overflow-hidden rounded-[1.4rem] border-gold/20 p-3 [transform:rotateY(-22deg)]">
-                  <p className="mono-tag text-gold">{TIMELINE[2].time}</p>
-                  <p className="mono-tag mt-1 text-foreground">{TIMELINE[2].label}</p>
-                  <p className="mono-tag mt-1.5 text-[0.6rem] text-muted-foreground">
-                    {TIMELINE[2].detail}
-                  </p>
-                </div>
-              </div>
-
-              {/* Center primary phone */}
-              <Tilt max={10}>
-                <div className="animate-float rounded-[2.5rem] border border-gold/25 bg-surface p-3 backdrop-blur-md gold-ring">
-                  <div className="relative w-[260px] overflow-hidden rounded-[2rem] sm:w-[300px]">
-                    <img
-                      src={heroUgc}
-                      alt="Commercial 9:16 video ad playing on a smartphone"
-                      width={576}
-                      height={1024}
-                      className="aspect-[9/16] w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
-                    <span className="mono-tag absolute left-4 top-4 flex items-center gap-2 rounded-full border border-gold/30 bg-background/70 px-3 py-1.5 text-gold backdrop-blur-md">
-                      <span className="live-dot h-1.5 w-1.5 rounded-full" />
-                      COMMERCIAL AD · 0:14
-                    </span>
-                    <div className="absolute inset-x-4 bottom-4">
-                      <p className="mono-tag text-gold">
-                        {TIMELINE[1].time} · {TIMELINE[1].label}
-                      </p>
-                      <p className="mono-tag mt-1 text-[0.6rem] text-muted-foreground">
-                        {TIMELINE[1].detail}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </Tilt>
+      {/* Editorial cover */}
+      <section className="relative z-10 mx-auto grid max-w-[1440px] items-center gap-8 px-5 pb-14 pt-10 sm:px-8 md:grid-cols-[1fr_0.8fr] md:gap-12 md:px-12 md:pb-20 md:pt-14">
+        <div className="relative z-10 md:py-10">
+          <Reveal>
+            <span className="mono-tag inline-flex items-center gap-2 border-l-2 border-primary pl-3 text-primary">
+              <Sparkles className="h-3.5 w-3.5" />
+              Independent creative studio · Made for founder-led brands
+            </span>
+          </Reveal>
+          <Reveal delay={0.06}>
+            <h1 className="mt-5 font-display text-6xl font-normal leading-[0.92] sm:text-7xl lg:text-8xl">
+              KUSH
+              <br />
+              <span className="text-primary">KUMAR</span>
+            </h1>
+            <p className="mt-5 font-display text-3xl leading-tight sm:text-4xl">
+              Your products, told in motion.
+            </p>
+          </Reveal>
+          <Reveal delay={0.12}>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
+              Turn your existing studio photos into three high-converting 9:16 video ads in 48
+              hours. Garment weave, jewellery hallmark, and packaging detail stay at the heart of
+              every frame.
+            </p>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <a href="#work" className="btn-gold inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5">
+                Explore selected work <ArrowDown className="h-4 w-4" />
+              </a>
+              <a href="#pricing" className="inline-flex items-center gap-2 border border-foreground/25 px-5 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary">
+                48-hour, 3-ad batch <ArrowUpRight className="h-4 w-4" />
+              </a>
             </div>
           </Reveal>
-        </div>
-
-        {/* Bottom 3D Glass Metrics Bar */}
-        <Reveal delay={0.1}>
-          <div className="glass mt-16 grid gap-px overflow-hidden rounded-[2rem] sm:grid-cols-2 lg:grid-cols-4">
-            {HERO_METRICS.map(([k, v]) => (
-              <div key={k} className="p-6 text-center">
-                <p className="mono-tag text-gold">{k}</p>
-                <p className="mt-2 text-xs text-muted-foreground">{v}</p>
+          <div className="mt-9 grid grid-cols-2 gap-x-5 gap-y-4 border-t border-border pt-5 sm:grid-cols-4">
+            {HERO_METRICS.map(([label, text]) => (
+              <div key={label}>
+                <p className="mono-tag text-primary">{label}</p>
+                <p className="mt-1 text-xs leading-5 text-muted-foreground">{text}</p>
               </div>
             ))}
           </div>
+        </div>
+        <Reveal delay={0.1} className="relative mx-auto w-full max-w-[520px] md:max-w-none">
+          <div className="relative overflow-hidden bg-secondary">
+            <img
+              src={heroUgc}
+              alt="Kush Kumar presenting a product in a campaign-style portrait"
+              width={576}
+              height={1024}
+              fetchPriority="high"
+              className="aspect-[4/5] w-full object-cover object-center md:aspect-[4/5]"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-5 pb-5 pt-20 text-background">
+              <p className="mono-tag">The studio, in motion</p>
+              <p className="mt-2 font-display text-2xl">From product detail to campaign film.</p>
+            </div>
+          </div>
+          <p className="mt-2 flex justify-between text-[0.65rem] uppercase text-muted-foreground">
+            <span>Performance creative</span><span>01 / 06</span>
+          </p>
         </Reveal>
       </section>
 

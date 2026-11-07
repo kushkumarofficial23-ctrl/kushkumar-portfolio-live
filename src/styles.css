@@ -37,70 +37,62 @@
   --color-amber-glow: var(--amber-glow);
   --color-emerald-pulse: var(--emerald-pulse);
   --color-surface: var(--surface);
-  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
 }
 
 :root {
-  --radius: 1rem;
-  /* Deep Obsidian Studio Matte #060609 */
-  --background: oklch(0.14 0.012 285);
-  /* Warm Ivory #FAF8F5 */
-  --foreground: oklch(0.97 0.006 90);
-  --card: oklch(0.19 0.014 285);
-  --card-foreground: oklch(0.97 0.006 90);
-  --popover: oklch(0.19 0.014 285);
-  --popover-foreground: oklch(0.97 0.006 90);
-  /* Burnished Champagne Zari Gold #D4AF37 */
-  --primary: oklch(0.8 0.125 88);
-  --primary-foreground: oklch(0.16 0.02 90);
-  --secondary: oklch(0.24 0.014 285);
-  --secondary-foreground: oklch(0.97 0.006 90);
-  --muted: oklch(0.24 0.014 285);
-  /* Muted Platinum #A1A1AA */
-  --muted-foreground: oklch(0.72 0.012 285);
-  --accent: oklch(0.8 0.125 88);
-  --accent-foreground: oklch(0.16 0.02 90);
+  --radius: 0.5rem;
+  /* Editorial Atelier: ink, soft ivory, champagne, and terracotta. */
+  --background: oklch(0.95 0.015 90);
+  --foreground: oklch(0.18 0.015 67);
+  --card: oklch(0.98 0.008 85);
+  --card-foreground: oklch(0.18 0.015 67);
+  --popover: oklch(0.98 0.008 85);
+  --popover-foreground: oklch(0.18 0.015 67);
+  --primary: oklch(0.49 0.14 35);
+  --primary-foreground: oklch(0.98 0.008 85);
+  --secondary: oklch(0.91 0.02 85);
+  --secondary-foreground: oklch(0.22 0.02 67);
+  --muted: oklch(0.91 0.02 85);
+  --muted-foreground: oklch(0.45 0.025 70);
+  --accent: oklch(0.79 0.09 83);
+  --accent-foreground: oklch(0.18 0.015 67);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.98 0.005 260);
-  /* Gold-tinted borders on carbon glass */
-  --border: oklch(0.88 0.08 88 / 14%);
-  --input: oklch(0.88 0.08 88 / 18%);
-  --ring: oklch(0.8 0.125 88);
-  --gold: oklch(0.8 0.125 88);
-  /* #F3E5AB champagne light */
-  --gold-light: oklch(0.93 0.06 95);
-  /* Warm Amber Rim Light #E69A47 */
-  --amber-glow: oklch(0.76 0.125 62);
-  /* Emerald Verification Pulse #10B981 */
-  --emerald-pulse: oklch(0.72 0.15 162);
-  /* Smoked Carbon Glass rgba(18,19,26,0.75) */
-  --surface: oklch(0.2 0.014 285 / 75%);
+  --border: oklch(0.78 0.025 75 / 65%);
+  --input: oklch(0.78 0.025 75 / 75%);
+  --ring: oklch(0.49 0.14 35);
+  --gold: oklch(0.73 0.09 82);
+  --gold-light: oklch(0.86 0.06 84);
+  --amber-glow: oklch(0.49 0.14 35);
+  --emerald-pulse: oklch(0.48 0.09 153);
+  --surface: oklch(0.98 0.008 85 / 90%);
 
   --gradient-gold: linear-gradient(
     115deg,
-    oklch(0.93 0.06 95) 0%,
-    oklch(0.8 0.125 88) 45%,
-    oklch(0.76 0.125 62) 100%
+    oklch(0.86 0.06 84) 0%,
+    oklch(0.73 0.09 82) 55%,
+    oklch(0.49 0.14 35) 100%
   );
   --gradient-spotlight: radial-gradient(
       55% 45% at 25% 0%,
-      color-mix(in oklab, var(--gold) 14%, transparent),
+      color-mix(in oklab, var(--gold) 8%, transparent),
       transparent 70%
     ),
     radial-gradient(
       45% 40% at 80% 10%,
-      color-mix(in oklab, var(--amber-glow) 10%, transparent),
+      color-mix(in oklab, var(--amber-glow) 4%, transparent),
       transparent 70%
     ),
     radial-gradient(
       70% 60% at 50% 110%,
-      color-mix(in oklab, var(--gold) 6%, transparent),
+      color-mix(in oklab, var(--gold) 3%, transparent),
       transparent 75%
     );
-  --shadow-gold: 0 0 50px -12px color-mix(in oklab, var(--gold) 55%, transparent);
-  --shadow-cinema: 0 30px 80px -30px oklch(0 0 0 / 85%);
+  --shadow-gold: 0 8px 24px -16px color-mix(in oklab, var(--primary) 45%, transparent);
+  --shadow-cinema: 0 18px 42px -28px oklch(0.18 0.015 67 / 35%);
 }
 
 @layer base {
@@ -120,7 +112,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
   }
 
   ::selection {
@@ -131,8 +123,8 @@
 @utility glass {
   background: var(--surface);
   border: 1px solid var(--border);
-  backdrop-filter: blur(16px);
-  border-radius: var(--radius-2xl);
+  backdrop-filter: blur(8px);
+  border-radius: 0.5rem;
 }
 
 @utility gold-ring {
@@ -140,7 +132,7 @@
 }
 
 @utility bg-spotlight {
-  background-image: var(--gradient-spotlight);
+  background-image: none;
 }
 
 @utility text-gold-gradient {
@@ -152,19 +144,13 @@
 @utility mono-tag {
   font-family: var(--font-mono);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   font-size: 0.65rem;
   font-weight: 500;
 }
 
 @utility grid-lines {
-  background-image: linear-gradient(
-      color-mix(in oklab, var(--gold) 8%, transparent) 1px,
-      transparent 1px
-    ),
-    linear-gradient(90deg, color-mix(in oklab, var(--gold) 8%, transparent) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(70% 60% at 50% 20%, black, transparent);
+  background-image: none;
 }
 
 /* Studio floor: 3800K-lit perspective grid */
@@ -184,11 +170,10 @@
 @utility cinema-card {
   transform-style: preserve-3d;
   position: relative;
-  border: 1px solid color-mix(in oklab, var(--gold) 22%, transparent);
-  background: var(--surface);
-  backdrop-filter: blur(14px);
-  border-radius: var(--radius-2xl);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 @utility cinema-card-hover {
@@ -217,10 +202,9 @@
 
 /* Champagne gold shimmer button */
 @utility btn-gold {
-  background-image: var(--gradient-gold);
-  background-size: 200% 100%;
-  color: oklch(0.16 0.02 90);
-  animation: gold-shimmer 5s ease-in-out infinite;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  animation: none;
 }
 
 @keyframes gold-shimmer {
@@ -260,4 +244,39 @@
 @utility live-dot {
   background: var(--emerald-pulse);
   animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.editorial-page {
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--foreground) 3%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 25% 100%;
+}
+
+.editorial-film-band {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.editorial-film-band p,
+.editorial-film-band h2,
+.editorial-film-band h3 {
+  color: inherit;
+}
+
+.editorial-film-band .text-muted-foreground {
+  color: color-mix(in oklab, var(--background) 72%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
