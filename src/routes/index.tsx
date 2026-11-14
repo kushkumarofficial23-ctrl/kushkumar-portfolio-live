@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
 import { useMemo, useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
@@ -63,20 +64,20 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab" },
+      { title: "Kush Kumar — 48-Hour Commercial Studio" },
       {
         name: "description",
         content:
-          "Turn your existing studio photos into 3 high-converting 9:16 video ads in 48 hours. 100% real product lock, zero inventory shipping, from ₹3,499.",
+          "Turn 2–3 existing product photos into three considered 9:16 commercial films in 48 hours. A Jaipur creative studio for founder-led D2C brands.",
       },
       {
         property: "og:title",
-        content: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab",
+        content: "Kush Kumar — 48-Hour Commercial Studio",
       },
       {
         property: "og:description",
         content:
-          "3 scroll-stopping 9:16 commercial video ads from your existing studio photos — delivered in 48 hours with 100% real product fidelity.",
+          "A founder-led Jaipur studio turning existing product photography into polished vertical campaign films, delivered in 48 hours.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -105,276 +106,243 @@ const FILTERS = [
 const WORK = [
   {
     src: vAcne,
-    title: "Acne Care Testimonial",
-    tag: "LIP-SYNC BOOKEND HOOK",
-    metric: "9.1% CVR ARCHITECTURE",
-    lens: "3800K Studio Key",
+    title: "Clinical Acne Routine — Customer Story Ad",
+    tag: "Problem-Solution Hook",
+    metric: "Skincare D2C · 9:16 Reels Ad",
     category: "Skincare & Beauty",
   },
   {
     src: vLeaf,
-    title: "Natural Skincare Cinematic",
-    tag: "85MM MACRO TEXTURE LOCK",
-    metric: "4000K STUDIO FILM",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Botanical Face Oil — Texture & Absorption Film",
+    tag: "Sensory Texture Hook",
+    metric: "Clean Beauty · 9:16 Brand Film",
     category: "Skincare & Beauty",
   },
   {
     src: vPolo,
-    title: "Polo Shirt Lookbook",
-    tag: "100% GARMENT WEAVE LOCK",
-    metric: "+2.4x CTR LOOKBOOK",
-    lens: "3800K Studio Key",
+    title: "Piqué Cotton Polo — Fit & Collar Structure Film",
+    tag: "True-to-Sample Weave",
+    metric: "Menswear D2C · 9:16 Lookbook Ad",
     category: "Fashion & Apparel",
   },
   {
     src: vJewelry,
-    title: "Palace Jewellery Campaign",
-    tag: "HERITAGE HALLMARK & STONE LOCK",
-    metric: "ROYAL CAMPAIGN FILM",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Heritage Polki & Kundan Bridal Suite — Palace Film",
+    tag: "Exact Stone & Meenakari",
+    metric: "Fine Jewellery · 9:16 Festive Spot",
     category: "Jewellery & Luxury",
   },
   {
     src: vIceCream,
-    title: "Caramel Ice Cream Pour",
-    tag: "HIGH-SPEED SENSORY MACRO",
-    metric: "3S CRAVING HOOK",
-    lens: "1/1000s High-Speed Plate",
+    title: "Artisanal Salted Caramel Gelato — 3s Craving Hook",
+    tag: "ASMR Craving Hook",
+    metric: "Gourmet Dessert · 9:16 Reels Ad",
     category: "Food & Beverage",
   },
   {
     src: vPizza,
-    title: "Chef Chicken Pizza Ad",
-    tag: "COMMERCIAL TABLETOP B-ROLL",
-    metric: "410k+ ORGANIC & PAID REACH",
-    lens: "3800K Studio Key",
+    title: "Wood-Fired Artisanal Pizza — Oven-to-Table Spot",
+    tag: "Oven-to-Table Story",
+    metric: "QSR & Dining · 9:16 Tabletop Ad",
     category: "Food & Beverage",
   },
   {
     src: vSoda,
-    title: "Soda Splash Ad",
-    tag: "1/4000s FLUID PHYSICS",
-    metric: "3S SCROLL-STOPPER",
-    lens: "1/4000s High-Speed Plate",
+    title: "Craft Botanical Soda — Ice & Citrus Pour Ad",
+    tag: "Visual Pattern Interrupt",
+    metric: "Beverage D2C · 9:16 Reels Ad",
     category: "Food & Beverage",
   },
   {
     src: vCafe,
-    title: "Cafe Vibes Reel",
-    tag: "AMBIENT FOLEY & PACING",
-    metric: "+3.1x LOCAL REACH",
-    lens: "24mm Gimbal Motion",
+    title: "Specialty Coffee Roastery — Morning Pour-Over Reel",
+    tag: "Morning Ritual",
+    metric: "Hospitality · 9:16 Reels Spot",
     category: "Food & Beverage",
   },
   {
     src: vDrink,
-    title: "Pink Drink Review",
-    tag: "VOICE-NOTE B-ROLL HYBRID",
-    metric: "+3.8x ROAS ANGLE",
-    lens: "3800K Studio Key",
+    title: "Berry Collagen Wellness Drink — Creator Taste-Test Ad",
+    tag: "Spoken Hook + Product Proof",
+    metric: "Wellness D2C · 9:16 Conversion Ad",
     category: "Food & Beverage",
   },
   {
     src: vIntro,
-    title: "Brand Introduction Spot",
-    tag: "FOUNDER-DIRECT HOOK",
-    metric: "STUDIO COMMERCIAL GRADE",
-    lens: "3800K Studio Key",
+    title: "D2C Founder Story — Direct-to-Camera Brand Manifesto",
+    tag: "Founder Story",
+    metric: "Brand Launch · 9:16 Story Spot",
     category: "Introduction",
   },
   {
     src: vCream,
-    title: "Skincare Crème Studio Spot",
-    tag: "ZERO-DRIFT PACKAGING LOCK",
-    metric: "LUXURY PEDESTAL FILM",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Barrier Repair Night Crème — Pedestal Commercial",
+    tag: "Product Detail",
+    metric: "Clinical Skincare · 9:16 Product Film",
     category: "Skincare & Beauty",
   },
   {
     src: vAlley,
-    title: "Streetwear Alley Walk",
-    tag: "24MM GIMBAL MOTION",
-    metric: "TRUE-TO-SAMPLE DRAPE",
-    lens: "24mm Gimbal Motion",
+    title: "Heavyweight 240 GSM Streetwear Tee — Urban Motion Ad",
+    tag: "Natural Fabric Drape",
+    metric: "Apparel Drop · 9:16 Reels Ad",
     category: "Fashion & Apparel",
   },
   {
     src: vStorefront,
-    title: "Aerial Storefront Reveal",
-    tag: "SPATIAL LOCATION HOOK",
-    metric: "FOOTFALL CONVERSION AD",
-    lens: "Aerial Drone Plate",
+    title: "Flagship Showroom Launch — Drone-to-Doorway Reveal",
+    tag: "Storefront Reveal",
+    metric: "Retail Flagship · 9:16 Location Ad",
     category: "Local Business & Storefront",
   },
   {
     src: vWatch,
-    title: "Luxury Wristwatch Reveal",
-    tag: "CHRONOGRAPH BEZEL MACRO",
-    metric: "CHIAROSCURO RIM LIGHT",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Automatic Chronograph — Brushed Steel & Dial Close-Up",
+    tag: "Dial & Case Detail",
+    metric: "Luxury Horology · 9:16 Product Spot",
     category: "Jewellery & Luxury",
   },
   {
     src: iSkin,
-    title: "Glass Skin Close-Up",
-    tag: "MICRO-PORE OPTICAL PORTRAIT",
-    metric: "HERO CAMPAIGN STILL",
-    lens: "3800K Studio Key",
+    title: "Hydra-Glow Serum — Natural Skin Finish Keyframe",
+    tag: "Natural Skin Finish",
+    metric: "Beauty Campaign Still",
     media: "image" as const,
     category: "Skincare & Beauty",
   },
   {
     src: iJewellery,
-    title: "Kundan Set on Velvet Bust",
-    tag: "100% KUNDAN & ZARI LOCK",
-    metric: "HERITAGE JEWELLERY PLATE",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Bridal Kundan & Pearl Choker — Velvet Display Still",
+    tag: "Stone-Setting Detail",
+    metric: "Bridal Jewellery Still",
     media: "image" as const,
     category: "Jewellery & Luxury",
   },
   {
     src: iTshirt,
-    title: "Premium Tee Poster",
-    tag: "FABRIC GSM & STITCH LOCK",
-    metric: "EDITORIAL CAMPAIGN STILL",
-    lens: "3800K Studio Key",
+    title: "Supima Cotton Essentials — Ribbed Collar & GSM Still",
+    tag: "Stitch-Level Detail",
+    metric: "Apparel Keyframe",
     media: "image" as const,
     category: "Fashion & Apparel",
   },
   {
     src: iBelieve,
-    title: "Believe Loungewear Lookbook",
-    tag: "VIRTUAL STUDIO PRODUCTION",
-    metric: "MULTI-ANGLE LOOKBOOK",
-    lens: "Virtual Studio Plate",
+    title: "Believe Co-Ord Loungewear — Multi-Angle Lookbook",
+    tag: "Print & Fit Detail",
+    metric: "Fashion Lookbook Still",
     media: "image" as const,
     category: "Fashion & Apparel",
   },
   {
     src: imgSkincare,
-    title: "Serum Ritual Frame",
-    tag: "BOTANICAL INGREDIENT PLATE",
-    metric: "AMBER GLASS REFRACTION",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Botanical Apothecary Dropper — Amber Glass Still",
+    tag: "Amber Glass Detail",
+    metric: "Skincare Campaign Still",
     media: "image" as const,
     category: "Skincare & Beauty",
   },
   {
     src: imgBeauty2,
-    title: "Beauty Glow Concept",
-    tag: "3800K GOLDEN HOUR KEY",
-    metric: "NATURAL DERMAL TEXTURE",
-    lens: "3800K Studio Key",
+    title: "Saffron & Kumkumadi Elixir — Golden Hour Campaign Still",
+    tag: "Warm Daylight Portrait",
+    metric: "Ayurvedic Beauty Still",
     media: "image" as const,
     category: "Skincare & Beauty",
   },
   {
     src: imgFashion,
-    title: "Apparel Street Concept",
-    tag: "DAYLIGHT EDITORIAL PLATE",
-    metric: "EXACT PATTERN LOCK",
-    lens: "Daylight Editorial Plate",
+    title: "Contemporary Menswear — Outdoor Editorial Still",
+    tag: "Outdoor Editorial",
+    metric: "Apparel Campaign Still",
     media: "image" as const,
     category: "Fashion & Apparel",
   },
   {
     src: imgBeverage,
-    title: "Beverage Splash Still",
-    tag: "HIGH-SPEED LIQUID MACRO",
-    metric: "LABEL TYPOGRAPHY LOCK",
-    lens: "1/4000s High-Speed Plate",
+    title: "Sparkling Fruit Tonic — High-Speed Condensation Still",
+    tag: "Label & Condensation",
+    metric: "Beverage Hero Still",
     media: "image" as const,
     category: "Food & Beverage",
   },
   {
     src: imgFood,
-    title: "Food Craving Still",
-    tag: "ARTISANAL PLATING MACRO",
-    metric: "SENSORY HOOK STILL",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Gourmet Dessert Plating — Texture & Glaze Hero Still",
+    tag: "Dessert Plating",
+    metric: "Food & Beverage Campaign Still",
     media: "image" as const,
     category: "Food & Beverage",
   },
   {
     src: imgTech,
-    title: "Gadget Hero Still",
-    tag: "ANODIZED HARDWARE MACRO",
-    metric: "STUDIO RIM LIGHTING",
-    lens: "3800K Studio Key",
+    title: "Matte-Black Audio Hardware — Industrial Design Still",
+    tag: "Industrial Design Detail",
+    metric: "Consumer Tech Still",
     media: "image" as const,
     category: "Tech & Gadgets",
   },
   {
     src: vTea,
-    title: "Taj Mahal Tea Testimonial",
-    tag: "LIP-SYNC BOOKEND HOOK",
-    metric: "FMCG TESTIMONIAL FILM",
-    lens: "3800K Studio Key",
+    title: "Heritage Assam Tea — Morning Cup & Aroma Story Ad",
+    tag: "Household Story Hook",
+    metric: "FMCG & Beverage · 9:16 Reels Ad",
     category: "Food & Beverage",
   },
   {
     src: vOats,
-    title: "Protein Oats UGC Review",
-    tag: "FOUNDER-STYLE UGC HOOK",
-    metric: "KITCHEN DEMO PLATE",
-    lens: "24mm Gimbal Motion",
+    title: "High-Protein Breakfast Oats — Kitchen Prep Ad",
+    tag: "Morning Routine",
+    metric: "Food & Wellness · 9:16 Spot",
     category: "Food & Beverage",
   },
   {
     src: vKurtaWalk,
-    title: "Heritage Kurta Walk",
-    tag: "100% GARMENT WEAVE LOCK",
-    metric: "HERITAGE WALK FILM",
-    lens: "24mm Gimbal Motion",
+    title: "Heritage Festive Kurta Walk",
+    tag: "Festive Motion",
+    metric: "Fashion & Apparel · 9:16 Film",
     category: "Fashion & Apparel",
   },
   {
     src: vChikankariHanger,
-    title: "Chikankari Hanger Reveal",
-    tag: "CHIKANKARI EMBROIDERY LOCK",
-    metric: "SHOWROOM DRAPE FILM",
-    lens: "3800K Studio Key",
+    title: "Lucknowi Chikankari Drape Reveal",
+    tag: "Embroidery & Drape",
+    metric: "Fashion & Apparel · 9:16 Film",
     category: "Fashion & Apparel",
   },
   {
     src: vChikankariMacro,
-    title: "Chikankari Embroidery Macro",
-    tag: "85MM MACRO EMBROIDERY LOCK",
-    metric: "STITCH-LEVEL PROOF PLATE",
-    lens: "ARRI Alexa 85mm Macro",
+    title: "Chikankari Threadwork Macro Proof",
+    tag: "Threadwork Detail",
+    metric: "Fashion & Apparel · 9:16 Film",
     category: "Fashion & Apparel",
   },
   {
     src: vKurtaModel,
-    title: "Maroon Kurta Showcase",
-    tag: "VIRTUAL STUDIO PRODUCTION",
-    metric: "MODEL SHOWCASE FILM",
-    lens: "3800K Studio Key",
+    title: "Festive Maroon Kurta Studio Film",
+    tag: "Festive Lookbook",
+    metric: "Fashion & Apparel · 9:16 Film",
     category: "Fashion & Apparel",
   },
   {
     src: vWhey,
-    title: "Gold Whey Gym Reveal",
-    tag: "ZERO-DRIFT PACKAGING LOCK",
-    metric: "SMOKE RIG REVEAL FILM",
-    lens: "3800K Studio Key",
+    title: "Gold Whey Isolate — Gym Smoke Reveal",
+    tag: "Training-Day Story",
+    metric: "Food & Beverage · 9:16 Film",
     category: "Food & Beverage",
   },
   {
     src: vF1,
-    title: "Hyperspeed F1 Track Plate",
-    tag: "HYPERSPEED TRACK CAMERA PLATE",
-    metric: "MOTORSPORT NIGHT FILM",
-    lens: "Telephoto Track Follow",
+    title: "Night Circuit Motorsport Commercial",
+    tag: "Night Circuit",
+    metric: "Local Business & Storefront · 9:16 Film",
     category: "Local Business & Storefront",
   },
   {
     src: iAttar,
-    title: "Al Abrar Attar Duo",
-    tag: "GOLD CAP & LABEL TYPOGRAPHY LOCK",
-    metric: "HERITAGE FRAGRANCE PLATE",
-    lens: "3800K Studio Key",
+    title: "Al Abrar Artisanal Attar Duo — Cut-Glass & Gold Cap Campaign",
+    tag: "Bottle & Label Detail",
+    metric: "Luxury Fragrance Still",
     media: "image" as const,
     category: "Attar & Fragrance",
   },
@@ -385,133 +353,72 @@ const CREATOR_STORIES = WORK.filter(
     category === "Introduction" || /testimonial|review/i.test(title),
 );
 
-const HERO_PILLS = [
-  { icon: Lock, text: "100% Real Product, Zari & Label Lock" },
-  { icon: Camera, text: "85mm Macro Optical Physics (Zero Uncanny Look)" },
-  { icon: Timer, text: "48-Hour Flat Turnaround" },
-  { icon: Box, text: "Zero Physical Sample Shipping" },
-];
-
-const HERO_METRICS = [
-  ["100% REAL PRODUCT LOCK", "Zero Print, Zari, or Label Distortion"],
-  ["3 HOOK VARIATIONS / SKU", "Built to Beat Meta Creative Fatigue"],
-  ["48-HOUR DELIVERY", "Directly From Your Existing Website Photos"],
-  ["80% COST REDUCTION", "Vs. ₹50,000+ Physical Studio Reshoots"],
-];
-
-const TIMELINE = [
-  {
-    time: "0:00–0:04",
-    label: "LIP-SYNC BOOKEND HOOK",
-    detail: "28–35% Thumb-Stop Pattern Interrupt",
-  },
-  {
-    time: "0:04–0:24",
-    label: "85MM MACRO PRODUCT PROOF",
-    detail: "100% Real Weave, Stone & Packaging Lock + Voice Note",
-  },
-  {
-    time: "0:24–0:30",
-    label: "DIRECT CONVERSION CTA",
-    detail: "Engineered for Meta Advantage+ & Reels ROAS",
-  },
-] as const;
+const CREATOR_STORIES = WORK.filter(
+  ({ category, title }) => category === "Introduction" || /story ad|taste-test ad|morning cup|kitchen prep/i.test(title),
+);
 
 const CAPABILITIES = [
   {
     icon: Clapperboard,
-    title: "48-Hour 3-Ad Conversion Validation Batch",
-    body: "3 complete 9:16 commercial video ads testing 3 distinct hook archetypes (Skeptical Comparison, Visual Problem-Agitate, ASMR Sensory Craving) built from your existing product photos.",
+    number: "01",
+    title: "Three distinct openings for every product",
+    body: "A problem-led start, a sensory detail, and a customer or founder point of view—three ways into the same story, ready to test.",
     large: true,
     image: virtualStudio,
   },
   {
-    icon: Layers,
-    title: "100% Real Product & Textile Lock Architecture",
-    body: "Dual-keyframe optical locking ensures complex Banarasi/Chikankari weaves, Kundan/925 silver filigree, and skincare typography never morph or drift across frames.",
-    large: false,
+    icon: Lock,
+    number: "02",
+    title: "Product details stay in focus",
+    body: "Fabric, jewellery settings, bottle labels, and packaging remain true to the references you share.",
     image: sareeHeritage,
   },
   {
     icon: Mic,
-    title: "Lip-Sync Bookend + 85mm Macro B-Roll Direction",
-    body: "On-camera spoken hook (0:00–0:03.5) cuts into hyper-detailed 85mm macro product proof under a continuous founder/consumer voice note (0:03.5–0:24) and a direct conversion sign-off (0:24–0:30).",
-    large: false,
+    number: "03",
+    title: "A story with a beginning and a reason to act",
+    body: "A spoken opening leads into close product details, natural voice direction, and a clear closing invitation.",
+    image: kundanSilver,
   },
   {
-    icon: Camera,
-    title: "4-Plate Commercial Product Staging",
-    body: "Studio pedestal, raw botanical/material ingredient staging, lifestyle model integration, and heritage architectural environments in 4K resolution.",
-    large: false,
-    wide: true,
-    image: kundanSilver,
+    icon: Layers,
+    number: "04",
+    title: "Ready for the way people watch",
+    body: "Vertical-first films with considered pacing, captions, sound, and versions suited to Reels, Shorts, and paid social.",
   },
 ];
 
-const VERTICALS = [
-  "1. Ethnic Wear, Sarees & Handlooms",
-  "2. Heritage Jewellery & 925 Silver",
-  "3. Clinical Skincare, Haircare & Attars",
-  "4. Gourmet Food, Specialty Coffee & Festive Gifting",
-];
+const WORKFLOW = [
+  ["01", "Share the product", "Send 2–3 existing product photos and a link to your brand or best-selling item."],
+  ["02", "Shape the story", "We agree the audience, three opening angles, and the product details that matter most."],
+  ["03", "Receive your films", "Your first three vertical ads arrive within 48 hours for review and a focused revision pass."],
+] as const;
 
 const DIAGNOSIS = [
   {
-    title: "The ₹40,000–₹80,000 Physical Studio Trap",
-    body: "Independent D2C founders across Ethnic Wear & Handlooms, 925 Silver & Heritage Jewellery, Clinical Skincare & Attars, and Artisanal Food/Gifting routinely spend ₹40,000 to ₹80,000 ($3,500+) per studio day on models, photographers, stylists, and lighting. Yet a physical studio only gives you static catalog lookbook photos or a single slow-panning reel with zero 3-second psychological hooks. Within 5 days on Meta Ads, creative fatigue hits and your new arrivals sit at '0 reviews'.",
+    title: "The physical-shoot spend",
+    body: "A studio day can mean coordinating samples, couriers, models, stylists, and a location—then receiving static images or a single cut with no opening-angle plan. The process is hard to repeat when a new launch needs fresh creative.",
   },
   {
-    title: "Why Cheap 'AI Generators' & Retainer Agencies Fail You",
-    body: "Self-serve generator tools warp your product's zari border, mutate bottle labels mid-clip, and produce uncanny rubbery jaw movement that destroys brand trust. Meanwhile, traditional marketing agencies lock you into ₹30,000+/month retainers for 3 months just to send recycled Canva graphics.",
+    title: "The self-serve or agency trade-off",
+    body: "Generic templates can miss the very details that make a product yours. Larger retainers can bring a longer commitment and a slower production cycle when you need new creative quickly.",
   },
   {
-    title: "The Kush Kumar Hybrid Virtual Production Solution",
-    body: "Led by Kush Kumar, our studio acts as your external Algorithmic Creative Testing Sandbox. You send us 2–3 existing studio or smartphone photos of your hero SKU on WhatsApp — zero physical shipping required. Using our Dual-Keyframe Optical Lock and Lip-Sync Bookend + 85mm Macro B-Roll architecture, we preserve 100% of your authentic weave, stone hallmark, and packaging typography, delivering 3 scroll-stopping 9:16 video ads in 48 hours.",
+    title: "A smaller, focused studio alternative",
+    body: "Share existing product photos, then work directly with Kush to shape three different opening angles and receive three vertical ads in 48 hours—without shipping stock or taking on a retainer.",
   },
 ];
 
 const COMPARISON = {
-  columns: [
-    "Comparison Metric",
-    "Physical Photography Studio (₹40k–₹80k / $3.5k+)",
-    "Traditional Marketing Agency (₹25k–₹45k/mo)",
-    "Kush Kumar Hybrid Lab",
-  ],
+  columns: ["What matters", "Physical studio", "Traditional agency", "Kush Kumar Studio"],
   rows: [
-    [
-      "Upfront Cost & Risk",
-      "₹40,000–₹80,000 per shoot day (studio rent, model, MUA)",
-      "₹30,000+/mo fixed retainer + 3-month lock-in",
-      "₹3,499 / $36.85 3-Ad Validation Batch — Zero lock-in risk",
-    ],
-    [
-      "Deliverable Output",
-      "Static lookbook photos or 1 slow reel with zero hook testing",
-      "Slow static Canva graphics & recycled templates",
-      "3 Custom 9:16 Video Ads with 3 distinct 3-second psychological hooks",
-    ],
-    [
-      "Turnaround Speed",
-      "2 to 3 weeks (shipping samples, booking, retouching)",
-      "10 to 14 days per campaign revision cycle",
-      "48 Hours Flat — built directly from your existing website/studio photos",
-    ],
-    [
-      "Product & Craft Fidelity",
-      "High in still photos, frozen in 1 lighting setup",
-      "Crops or distorts product details in generic templates",
-      "100% Real Product Lock (exact zari weave, stone hallmark, bottle label)",
-    ],
-    [
-      "Founder Access",
-      "Photographer exits after file delivery; zero ad strategy",
-      "Managed by junior account executives",
-      "Direct 2-Minute Strategy Call with Kush Kumar",
-    ],
+    ["Upfront cost & commitment", "₹40,000–₹80,000 per shoot day", "₹30,000+/mo; often a multi-month commitment", "₹3,499 one-time validation batch; no retainer lock-in"],
+    ["What you receive", "Static catalog photos or one slow reel", "Campaign templates and agency-managed delivery", "3 custom 9:16 video ads with 3 distinct opening hooks"],
+    ["Turnaround", "Often 2–3 weeks with booking and shipping", "Typically 10–14 days per campaign cycle", "48 hours from existing product photos"],
+    ["Product detail", "Strong in stills, within one physical setup", "Depends on the supplied template and crop", "Your fabric, stone setting, and label details stay central"],
+    ["Who you work with", "Photographer at shoot and file handoff", "Account or campaign team", "Direct founder-to-founder collaboration with Kush"],
   ],
 };
-
-type Currency = "INR" | "USD";
 
 const TIERS = [
   {
@@ -519,54 +426,69 @@ const TIERS = [
     badge: "TEST FIRST, SCALE SECOND",
     popular: true,
     price: { INR: "₹3,499", USD: "$36.85" },
-    note: "One-Time Validation Batch (No Retainer Lock-In)",
+    note: "One-time batch · No retainer lock-in",
     features: [
-      "3 × Custom 9:16 Vertical Commercial Video Ads (20s–30s)",
-      "3 Distinct 3-Second Psychological Hooks for Meta A/B Testing",
-      "100% Real Product, Weave, Stone & Label Fidelity Lock",
-      "Lip-Sync Bookend + 85mm Macro B-Roll + Synchronized Foley & Captions",
-      "Delivered in 48 Hours Flat from 2–3 Smartphone or Website Photos",
-      "Bonus: Free 5-Second Visual Hook Preview Before You Scale",
+      "3 custom 9:16 vertical commercial video ads (20–30 seconds)",
+      "3 distinct opening hooks for Meta testing",
+      "Product, fabric, stone, and label details kept true to your references",
+      "Spoken hook, close-up product proof, voice direction, sound, and captions",
+      "Delivered within 48 hours from 2–3 existing product photos",
+      "Commercial usage for Meta, Reels, Shorts, and TikTok",
     ],
-    cta: "Claim 48-Hour Validation Batch →",
+    cta: "Start the validation batch",
   },
   {
     name: "Starter Creative Testing Sprint",
     badge: null,
     popular: false,
     price: { INR: "₹18,000", USD: "$189.58" },
-    note: "2 Hero Concepts + 4 Modular Hooks (6 Ad Assets Total)",
+    note: "2 hero concepts + 4 modular hooks · 6 ad assets",
     features: [
-      "2 Complete Hero Video Concepts + 4 Modular 3-Second Hook Variations (6 Ad Assets Total)",
-      "4-Plate 4K Virtual Studio Product Photoshoot (Studio, Ingredient, In-Use, Lifestyle)",
-      "Hinglish or English Direct-Response Script & Voiceover Engineering",
-      "Delivered in 48–72 Hours",
+      "2 complete hero video concepts with 4 modular hook variations",
+      "4-plate product still set: studio, ingredient, in-use, and lifestyle",
+      "English, Hinglish, or Hindi script and voice direction",
+      "Delivered within 48–72 hours",
     ],
-    cta: "Book Starter Testing Sprint →",
+    cta: "Choose the starter sprint",
   },
   {
     name: "Monthly Performance Creative Retainer",
     badge: null,
     popular: false,
     price: { INR: "₹35,000/mo", USD: "$368.63/mo" },
-    note: "Replaces ₹50,000–₹80,000/mo in physical studio shoots",
+    note: "Ongoing creative production · Monthly",
     features: [
-      "15 Custom 9:16 Commercial Video Ads Every Month",
-      "Continuous Weekly Hook Refresh to Eliminate Meta Ad Fatigue",
-      "Priority 48-Hour Turnaround Across New Launches & Festive Drops",
-      "Direct Founder-to-Founder WhatsApp/Slack Comms Channel",
+      "15 custom 9:16 commercial video ads each month",
+      "Weekly opening-hook refreshes",
+      "Priority 48-hour turnaround for launches and festive drops",
+      "Direct founder communication with Kush",
     ],
-    cta: "Apply for Monthly Retainer →",
+    cta: "Discuss a monthly retainer",
   },
 ];
 
+const FAQS = [
+  ["Do I need to courier product samples?", "No. Clear website or phone photos of your product are enough to get started."],
+  ["Will my packaging, logo, fabric border, or stone setting change?", "Your references guide the work. We keep the exact product details in focus and review them before delivery."],
+  ["How does the ₹3,499 48-hour batch work?", "Share photos of one hero product. We shape three opening angles, produce three vertical video ads, and deliver the first pass within 48 hours."],
+  ["Can you make ads in Hindi, Marathi, Hinglish, or English?", "Yes. Script and voice direction can be shaped for English, Hindi, Hinglish, or Marathi audiences."],
+  ["Are revisions included?", "The validation batch includes a focused revision pass for pacing, captions, voice direction, or the opening framing."],
+] as const;
+
+type Currency = "INR" | "USD";
+const WHATSAPP = "https://wa.me/917073777605";
+const EMAIL = "kushkumarofficial06@gmail.com";
+const PHONE_DISPLAY = "+91 70737 77605";
+const PHONE_TEL = "tel:+917073777605";
+const INSTAGRAM = "https://www.instagram.com/kushkumar.ai/";
+
 const NAV_LINKS = [
-  ["Work", "#work"],
+  ["Selected Work", "#work"],
   ["Creator Stories", "#stories"],
-  ["Approach", "#services"],
-  ["About", "#about"],
+  ["How Delivery Works", "#services"],
+  ["Why Shoots Fail", "#why"],
   ["Pricing", "#pricing"],
-  ["Contact", "#contact"],
+  ["Founder Note", "#founder"],
 ] as const;
 
 function Index() {
@@ -586,77 +508,50 @@ function Index() {
   }
 
   return (
-    <main className="editorial-page relative min-h-screen overflow-x-hidden bg-background">
-
-      {/* Sticky 3D Glass Navigation */}
+    <main className="editorial-page min-h-screen overflow-x-hidden bg-background text-foreground">
       <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-3 px-5 py-3 sm:px-8 lg:px-12">
-          <div className="shrink-0">
-            <p className="font-display text-2xl font-bold uppercase">
-              <span className="text-foreground">Kush Kumar</span>
-            </p>
-            <p className="hidden text-xs text-muted-foreground sm:block">
-              Independent creative studio
-            </p>
-          </div>
-
-          <nav aria-label="Main navigation" className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs text-muted-foreground sm:gap-x-5 sm:text-sm">
+        <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
+          <a href="#top" className="shrink-0 leading-tight" aria-label="Kush Kumar home">
+            <span className="font-display text-2xl">Kush Kumar</span>
+            <span className="mt-1 block text-[0.68rem] text-muted-foreground">D2C Video Ad & Commercial Studio · Jaipur, India</span>
+          </a>
+          <nav aria-label="Main navigation" className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-xs text-muted-foreground sm:text-sm">
             {NAV_LINKS.map(([label, href]) => (
-              <a key={href} className="transition-colors hover:text-primary" href={href}>
-                {label}
-              </a>
+              <a key={href} className="transition-colors hover:text-primary" href={href}>{label}</a>
             ))}
           </nav>
+          <div className="flex w-full items-center justify-between gap-3 border-t border-border pt-3 lg:w-auto lg:border-0 lg:pt-0">
+            <span className="mono-tag flex items-center gap-2 text-muted-foreground"><span className="live-dot h-2 w-2 rounded-full" />2 validation slots open this week</span>
+            <Button asChild size="sm" className="rounded-sm bg-primary text-primary-foreground hover:bg-primary/90">
+              <a href="#pricing">Book a 48h batch <ArrowUpRight aria-hidden="true" /></a>
+            </Button>
+          </div>
         </div>
       </header>
 
-      {/* Editorial cover */}
-      <section className="relative z-10 mx-auto grid max-w-[1440px] items-center gap-8 px-5 pb-14 pt-10 sm:px-8 md:grid-cols-[1fr_0.8fr] md:gap-12 md:px-12 md:pb-20 md:pt-14">
-        <div className="relative z-10 md:py-10">
-          <Reveal>
-            <span className="mono-tag inline-flex items-center gap-2 border-l-2 border-primary pl-3 text-primary">
-              <Sparkles className="h-3.5 w-3.5" />
-              Independent creative studio · Made for founder-led brands
-            </span>
-          </Reveal>
-          <Reveal delay={0.06}>
-            <h1 className="mt-5 font-display text-6xl font-normal leading-[0.92] sm:text-7xl lg:text-8xl">
-              KUSH
-              <br />
-              <span className="text-primary">KUMAR</span>
-            </h1>
-            <p className="mt-5 font-display text-3xl leading-tight sm:text-4xl">
-              Your products, told in motion.
-            </p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base">
-              Turn your existing studio photos into three high-converting 9:16 video ads in 48
-              hours. Garment weave, jewellery hallmark, and packaging detail stay at the heart of
-              every frame.
-            </p>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <a href="#work" className="btn-gold inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold transition-transform hover:-translate-y-0.5">
-                Explore selected work <ArrowDown className="h-4 w-4" />
-              </a>
-              <a href="#pricing" className="inline-flex items-center gap-2 border border-foreground/25 px-5 py-3 text-sm font-semibold transition-colors hover:border-primary hover:text-primary">
-                48-hour, 3-ad batch <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-          </Reveal>
-          <div className="mt-9 grid grid-cols-2 gap-x-5 gap-y-4 border-t border-border pt-5 sm:grid-cols-4">
-            {HERO_METRICS.map(([label, text]) => (
-              <div key={label}>
-                <p className="mono-tag text-primary">{label}</p>
-                <p className="mt-1 text-xs leading-5 text-muted-foreground">{text}</p>
-              </div>
-            ))}
+      <section id="top" className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-12 sm:px-8 md:grid-cols-[1.08fr_0.92fr] md:gap-14 md:px-12 md:pb-24 md:pt-16">
+        <div className="relative z-10">
+          <p className="mono-tag inline-flex items-center gap-2 border-l border-primary pl-3 text-primary"><Sparkles aria-hidden="true" className="h-3.5 w-3.5" />For founder-led D2C brands · No product shipping</p>
+          <h1 className="mt-7 max-w-3xl font-sans text-4xl font-semibold leading-[1.08] sm:text-5xl lg:text-6xl">
+            Turn 2–3 existing product photos into <em className="font-display font-normal text-primary">3 scroll-stopping 9:16 video ads</em> in 48 hours.
+          </h1>
+          <p className="mt-6 max-w-2xl text-base leading-7 text-muted-foreground">
+            Skip weeks coordinating models, studios, and couriers. Share the photos you already have; we keep your fabric weave, jewellery setting, and packaging typography at the heart of vertical ads made for the first three seconds.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Button asChild className="h-auto rounded-sm bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
+              <a href="#pricing">Start the 48-hour batch ({currency === "INR" ? "₹3,499" : "$36.85"}) <ArrowUpRight aria-hidden="true" /></a>
+            </Button>
+            <Button asChild variant="outline" className="h-auto rounded-sm border-border bg-transparent px-5 py-3.5 text-sm">
+              <a href="#work">View the commercial archive <ArrowDown aria-hidden="true" /></a>
+            </Button>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-x-5 gap-y-2 border-t border-border pt-5 text-xs text-muted-foreground">
+            {["True-to-reference product details", "3 opening angles per product", "48-hour first delivery", "No inventory shipping"].map((item) => <span key={item} className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-primary" />{item}</span>)}
           </div>
         </div>
-        <Reveal delay={0.1} className="relative mx-auto w-full max-w-[520px] md:max-w-none">
-          <div className="relative overflow-hidden bg-secondary">
+        <div className="relative mx-auto w-full max-w-[520px] md:max-w-none">
+          <figure className="relative overflow-hidden border border-border bg-card">
             <img
               src={heroUgc}
               alt="Kush Kumar presenting a product in a campaign-style portrait"
@@ -665,71 +560,66 @@ function Index() {
               fetchPriority="high"
               className="aspect-[4/5] w-full object-cover object-center md:aspect-[4/5]"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-5 pb-5 pt-20 text-background">
-              <p className="mono-tag">The studio, in motion</p>
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent px-5 pb-5 pt-20 text-background">
+              <p className="mono-tag">Independent creative direction · Jaipur, India</p>
               <p className="mt-2 font-display text-2xl">From product detail to campaign film.</p>
+            </figcaption>
+          </figure>
+          <div className="mt-4 grid grid-cols-3 divide-x divide-border border-y border-border">
+            {[
+              ["0:00–0:03.5", "The scroll-stopper hook"],
+              ["0:03.5–0:24", "True-to-sample proof"],
+              ["0:24–0:30", "Direct conversion close"],
+            ].map(([time, label]) => <div key={time} className="px-3 py-3"><p className="mono-tag text-primary">{time}</p><p className="mt-1 text-xs leading-5 text-muted-foreground">{label}</p></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="work" className="border-y border-border bg-card/40 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p className="mono-tag text-primary">01 / Selected commercial archive · 9:16 vertical & campaign stills</p>
+              <h2 className="mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl">Ads built to stop the thumb—and keep every thread, stone, and label real.</h2>
             </div>
+            <p className="max-w-md text-sm leading-6 text-muted-foreground">A working archive across product films, campaign stills, and on-camera stories. Choose a vertical and press play.</p>
           </div>
-          <p className="mt-2 flex justify-between text-[0.65rem] uppercase text-muted-foreground">
-            <span>Performance creative</span><span>01 / 06</span>
-          </p>
-        </Reveal>
-      </section>
-
-      {/* Selected Work */}
-      <section id="work" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <Reveal>
-          <p className="mono-tag text-gold">Verified Commercial Output • 9:16 Vertical-First</p>
-          <div className="mt-3 flex flex-wrap items-end justify-between gap-6">
-            <h2 className="font-display text-3xl font-extrabold sm:text-4xl">
-              Selected Commercial & Hybrid Production Work
-            </h2>
-            <p className="max-w-md text-sm text-muted-foreground">
-              Every piece is engineered for Meta Ads Manager, Instagram Reels, and YouTube Shorts
-              with strict optical lens physics, tactile foley audio, and 3-second hook retention.
-            </p>
+          <div className="mt-8 flex flex-wrap gap-2" aria-label="Filter work by category">
+            {FILTERS.map((f) => (
+              <Button key={f} type="button" size="sm" variant={filter === f ? "default" : "outline"} aria-pressed={filter === f} onClick={() => setFilter(f)} className={filter === f ? "rounded-sm bg-primary text-primary-foreground" : "rounded-sm border-border bg-transparent text-muted-foreground hover:text-foreground"}>{f}</Button>
+            ))}
           </div>
-        </Reveal>
-
-        <div className="mt-8 flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`mono-tag rounded-full border px-4 py-2 transition-colors ${
-                filter === f
-                  ? "border-transparent btn-gold font-bold"
-                  : "border-border bg-surface text-muted-foreground backdrop-blur-md hover:text-gold"
-              }`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((w) => (
-            <VideoCard key={w.title} {...w} />
-          ))}
+          <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {visible.map((w) => <VideoCard key={w.title} {...w} />)}
+          </div>
         </div>
       </section>
 
-      {/* Services — Hybrid Architecture */}
-      <section id="services" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <Reveal>
-          <p className="mono-tag text-gold">Core Studio Capabilities</p>
-          <h2 className="mt-3 font-display text-3xl font-extrabold sm:text-4xl">
-            Hybrid Virtual Production Architecture
-          </h2>
-        </Reveal>
+      <section id="stories" className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="mono-tag text-primary">People, in their own voice</p>
+            <h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">Creator Stories</h2>
+          </div>
+          <p className="max-w-2xl text-sm leading-7 text-muted-foreground">A dedicated edit of testimonials, reviews, and founder introductions from the existing archive. Real voices lead; product details follow.</p>
+        </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {CREATOR_STORIES.map((item) => <VideoCard key={`story-${item.title}`} {...item} />)}
+        </div>
+      </section>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {CAPABILITIES.map(({ icon: Icon, title, body, large, wide, image }, i) => (
-            <Reveal key={title} delay={i * 0.07} className={large ? "lg:col-span-2 lg:row-span-2" : wide ? "lg:col-span-2" : ""}>
-              <Tilt className="h-full" max={6}>
-                <div className="cinema-card cinema-card-hover group flex h-full flex-col overflow-hidden p-8">
+      <section id="services" className="border-y border-border bg-card/40 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div className="max-w-3xl">
+            <p className="mono-tag text-primary">02 / How delivery works · From product photo to live ad</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">No courier delays. No shoot-day choreography. Just considered commercial creative.</h2>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {CAPABILITIES.map(({ icon: Icon, number, title, body, large, image }, i) => (
+              <Reveal key={number} delay={i * 0.06}>
+                <article className={`cinema-card h-full p-5 sm:p-6 ${large ? "lg:col-span-1" : ""}`}>
                   {image && (
-                    <div className="mb-6 overflow-hidden rounded-[1.4rem]">
+                    <div className="mb-5 overflow-hidden border border-border">
                       <img
                         src={image}
                         alt={title}
@@ -740,275 +630,110 @@ function Index() {
                       />
                     </div>
                   )}
-                  <Icon className={`text-gold ${large ? "h-9 w-9" : "h-7 w-7"}`} />
-                  <h3 className={`mt-6 font-bold ${large ? "text-3xl sm:text-4xl" : "text-xl"}`}>
-                    {title}
-                  </h3>
-                  <p
-                    className={`mt-3 text-muted-foreground ${large ? "max-w-lg text-base" : "text-sm"}`}
-                  >
-                    {body}
-                  </p>
-                </div>
-              </Tilt>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* 4 Core Verticals Badge Strip */}
-        <Reveal delay={0.1}>
-          <div className="glass mt-10 flex flex-wrap items-center justify-center gap-3 p-6">
-            <p className="mono-tag w-full text-center text-muted-foreground">
-              Core D2C & Festive Verticals
-            </p>
-            {VERTICALS.map((v) => (
-              <span
-                key={v}
-                className="mono-tag rounded-full border border-gold/30 bg-surface px-4 py-2 text-gold"
-              >
-                {v}
-              </span>
+                  <p className="mono-tag text-primary">{number} / Studio practice</p>
+                  <Icon aria-hidden="true" className="mt-4 h-6 w-6 text-primary" />
+                  <h3 className="mt-4 font-sans text-lg font-semibold leading-snug">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">{body}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
-        </Reveal>
-      </section>
-
-      {/* About & Problem-First Diagnosis */}
-      <section id="why" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <Reveal>
-          <p className="mono-tag text-gold">About Kush Kumar • The D2C Studio-Spend Paradox</p>
-          <h2 className="mt-3 max-w-4xl font-display text-3xl font-extrabold leading-tight sm:text-4xl">
-            Why Craft-First D2C Brands Bleed Budget on Physical Studio Shoots — And How Our Hybrid
-            Lab Fixes It in 48 Hours.
-          </h2>
-        </Reveal>
-
-        <div className="mt-10 grid gap-5 lg:grid-cols-3">
-          {DIAGNOSIS.map((d, i) => (
-            <Reveal key={d.title} delay={i * 0.08}>
-              <Tilt className="h-full" max={6}>
-                <div className="cinema-card cinema-card-hover h-full p-8">
-                  <p className="mono-tag text-gold">Diagnosis {String(i + 1).padStart(2, "0")}</p>
-                  <h3 className="mt-4 text-lg font-bold leading-snug">{d.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d.body}</p>
-                </div>
-              </Tilt>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* Interactive 3D Comparison Matrix */}
-        <Reveal delay={0.1}>
-          <div className="mt-14 overflow-x-auto rounded-[2rem]">
-            <table className="w-full min-w-[900px] border-separate border-spacing-1.5 text-left text-sm">
-              <thead>
-                <tr>
-                  {COMPARISON.columns.map((c, i) => (
-                    <th
-                      key={c}
-                      className={`p-4 text-xs font-semibold uppercase tracking-wide ${
-                        i === 3
-                          ? "rounded-2xl border border-gold/50 bg-surface text-gold gold-ring"
-                          : "text-muted-foreground"
-                      }`}
-                    >
-                      {c}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {COMPARISON.rows.map((row) => (
-                  <tr key={row[0]}>
-                    {row.map((cell, ci) => (
-                      <td
-                        key={ci}
-                        className={`p-4 align-top leading-relaxed ${
-                          ci === 0
-                            ? "font-semibold text-foreground"
-                            : ci === 3
-                              ? "rounded-2xl border border-gold/50 bg-surface text-foreground"
-                              : "text-muted-foreground"
-                        }`}
-                      >
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="mt-12 border-t border-border pt-6">
+            <p className="mono-tag text-muted-foreground">A straightforward three-step process</p>
+            <ol className="mt-6 grid gap-6 md:grid-cols-3">
+              {WORKFLOW.map(([number, title, body]) => <li key={number} className="border-l border-primary/50 pl-5"><p className="mono-tag text-primary">{number} / Step</p><h3 className="mt-2 font-display text-2xl">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{body}</p></li>)}
+            </ol>
           </div>
-        </Reveal>
-      </section>
-
-      {/* Pricing & Validation */}
-      <section id="pricing" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <Reveal>
-          <div className="text-center">
-            <p className="mono-tag text-gold">Transparent Pricing • Trojan Horse Validation Batch</p>
-            <h2 className="mx-auto mt-3 max-w-3xl font-display text-3xl font-extrabold sm:text-4xl">
-              Test Before You Scale. No Retainer Lock-In.
-            </h2>
-            <div className="mt-7 inline-flex rounded-full border border-border bg-surface p-1 backdrop-blur-md">
-              {(["INR", "USD"] as Currency[]).map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setCurrency(c)}
-                  className={`mono-tag rounded-full px-5 py-2 transition-colors ${
-                    currency === c ? "btn-gold font-bold" : "text-muted-foreground hover:text-gold"
-                  }`}
-                >
-                  {c === "INR" ? "₹ India D2C" : "$ International D2C"}
-                </button>
-              ))}
-            </div>
-          </div>
-        </Reveal>
-
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {TIERS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.08}>
-              <Tilt className="h-full" max={6}>
-                <div
-                  className={`cinema-card relative flex h-full flex-col p-8 ${
-                    t.popular ? "border-gold/60 gold-ring" : ""
-                  }`}
-                >
-                  {t.badge && (
-                    <span className="mono-tag absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full btn-gold px-4 py-1.5 font-bold">
-                      {t.badge}
-                    </span>
-                  )}
-                  <h3 className="text-lg font-bold leading-snug">{t.name}</h3>
-                  <p className="mt-4 font-display text-4xl font-extrabold">
-                    <span className="text-gold-gradient">{t.price[currency]}</span>
-                  </p>
-                  <p className="mono-tag mt-2 text-muted-foreground">{t.note}</p>
-                  <ul className="mt-6 flex-1 space-y-3">
-                    {t.features.map((f) => (
-                      <li key={f} className="flex gap-3 text-sm text-muted-foreground">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="#contact"
-                    className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold transition-transform hover:-translate-y-0.5 ${
-                      t.popular ? "btn-gold gold-ring" : "glass text-foreground hover:text-gold"
-                    }`}
-                  >
-                    {t.cta}
-                  </a>
-                </div>
-              </Tilt>
-            </Reveal>
-          ))}
         </div>
       </section>
 
-      {/* Contact — 2-Minute Founder Call */}
-      <section id="contact" className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        <Reveal>
-          <div className="glass grid gap-12 p-8 sm:p-12 lg:grid-cols-2">
-            <div>
-              <h2 className="font-display text-3xl font-extrabold leading-tight sm:text-4xl">
-                Ready to Beat Your Static Catalog Ads in 48 Hours?
-              </h2>
-              <p className="mt-5 text-muted-foreground">
-                Share your product and goal — you'll get a creative direction and timeline back.
-              </p>
-
-              {/* Direct 2-Minute Call Banner */}
-              <div className="mt-8 rounded-2xl border border-gold/40 bg-surface p-5 gold-ring">
-                <p className="text-sm leading-relaxed text-foreground">
-                  Prefer a fast founder-to-founder chat? Send 2–3 photos of your #1 bestseller SKU
-                  on WhatsApp or hop on a direct 2-minute call with Kush Kumar (
-                  <a href={PHONE_TEL} className="font-semibold text-gold hover:underline">
-                    {PHONE_DISPLAY}
-                  </a>
-                  ) — we'll map out your 3 custom hook angles on the spot.
-                </p>
-              </div>
-
-              <div className="mt-6 space-y-3">
-                <a
-                  href={`mailto:${EMAIL}`}
-                  className="flex items-center gap-3 rounded-2xl border border-border px-5 py-4 text-sm transition-colors hover:border-gold hover:text-gold"
-                >
-                  <Mail className="h-4 w-4" />
-                  {EMAIL}
-                </a>
-                <a
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex items-center gap-3 rounded-2xl border border-border px-5 py-4 text-sm transition-colors hover:border-gold hover:text-gold"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp — quick reply
-                </a>
-                <a
-                  href={PHONE_TEL}
-                  className="flex items-center gap-3 rounded-2xl border border-border px-5 py-4 text-sm transition-colors hover:border-gold hover:text-gold"
-                >
-                  <Phone className="h-4 w-4" />
-                  {PHONE_DISPLAY} — direct 2-minute founder call
-                </a>
-              </div>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                required
-                name="name"
-                placeholder="Your name"
-                className="w-full rounded-2xl border border-border bg-background/40 px-5 py-3.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
-              />
-              <input
-                required
-                name="link"
-                placeholder="Brand website / product link"
-                className="w-full rounded-2xl border border-border bg-background/40 px-5 py-3.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
-              />
-              <textarea
-                required
-                name="goal"
-                rows={4}
-                placeholder="Project goal"
-                className="w-full resize-none rounded-2xl border border-border bg-background/40 px-5 py-3.5 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
-              />
-              <select
-                required
-                name="budget"
-                defaultValue=""
-                className="w-full rounded-2xl border border-border bg-background/40 px-5 py-3.5 text-sm text-foreground outline-none transition-colors focus:border-gold"
-              >
-                <option value="" disabled>
-                  Budget / Package Selection
-                </option>
-                <option value="validation">₹3,499 / $36.85 — 48-Hour 3-Ad Validation Batch</option>
-                <option value="sprint">₹18,000 / $189.58 — Starter Creative Testing Sprint</option>
-                <option value="retainer">
-                  ₹35,000/mo / $368.63/mo — 15-Ad Monthly Retainer
-                </option>
-                <option value="custom">Custom Multi-SKU Festive Campaign</option>
-              </select>
-              <button
-                type="submit"
-                className="btn-gold w-full rounded-full px-6 py-3.5 text-sm font-bold uppercase tracking-wide transition-transform hover:-translate-y-0.5 gold-ring"
-              >
-                Send Project Brief
-              </button>
-            </form>
+      <section id="why" className="editorial-paper py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <p className="mono-tag text-primary">03 / The D2C studio-spend paradox</p>
+          <h2 className="mt-4 max-w-4xl font-display text-4xl leading-tight sm:text-5xl">Why independent brands struggle to keep creative moving—and a more focused way to make it.</h2>
+          <div className="mt-10 grid gap-0 border-y border-border md:grid-cols-3 md:divide-x md:divide-border">
+            {DIAGNOSIS.map((item, i) => <article key={item.title} className="py-6 md:px-6 md:first:pl-0 md:last:pr-0"><p className="mono-tag text-primary">0{i + 1} / Field note</p><h3 className="mt-3 font-display text-2xl leading-snug">{item.title}</h3><p className="mt-3 text-sm leading-7 text-muted-foreground">{item.body}</p></article>)}
           </div>
-        </Reveal>
+          <div className="mt-14">
+            <p className="mono-tag text-primary">A practical comparison</p>
+            <div className="mt-4 overflow-x-auto border-y border-border">
+              <table className="w-full min-w-[760px] text-left text-sm">
+                <thead><tr>{COMPARISON.columns.map((col, i) => <th key={col} className={`border-b border-border px-4 py-4 align-bottom font-semibold ${i === 3 ? "text-primary" : "text-muted-foreground"}`}>{col}</th>)}</tr></thead>
+                <tbody>{COMPARISON.rows.map((row) => <tr key={row[0]} className="border-b border-border last:border-0">{row.map((cell, i) => <td key={i} className={`px-4 py-4 align-top leading-6 ${i === 0 ? "font-semibold" : i === 3 ? "font-medium" : "text-muted-foreground"}`}>{cell}</td>)}</tr>)}</tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <footer className="relative z-10 mx-auto max-w-7xl px-6 pb-12 text-center text-xs text-muted-foreground">
-        © 2026 Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab. All
-        Rights Reserved.
+      <section id="founder" className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.85fr_1.15fr] lg:px-12">
+        <div>
+          <p className="mono-tag text-primary">04 / Direct founder accountability</p>
+          <p className="mt-4 font-display text-4xl leading-tight sm:text-5xl">“You work directly with me—not a hand-off.”</p>
+        </div>
+        <div className="lg:border-l lg:border-border lg:pl-10">
+          <p className="text-base leading-8 text-muted-foreground">Hi, I’m Kush Kumar, creative director and founder in Jaipur. I built this studio for independent D2C brands across ethnic wear, jewellery, skincare, attars, and specialty food—brands looking for thoughtful commercial creative without a long shoot cycle. For every validation batch, I shape the opening angles, review product details, and share progress with you directly.</p>
+          <div className="mt-7 grid gap-3 border-t border-border pt-5 text-sm sm:grid-cols-2">
+            <a className="transition-colors hover:text-primary" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp · {PHONE_DISPLAY}</a>
+            <a className="transition-colors hover:text-primary" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <a className="transition-colors hover:text-primary" href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram · @kushkumar.ai</a>
+            <span className="text-muted-foreground">Jaipur, Rajasthan · Working with D2C brands worldwide</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" className="border-y border-border bg-card/40 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div><p className="mono-tag text-primary">05 / Transparent pricing</p><h2 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">Test first. Scale second.</h2><p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">Choose a focused first batch or ongoing creative support. No retainer is required to start.</p></div>
+            <div className="inline-flex border border-border p-1" aria-label="Select pricing currency">
+              {(["INR", "USD"] as Currency[]).map((c) => <Button key={c} type="button" size="sm" variant={currency === c ? "default" : "ghost"} aria-pressed={currency === c} onClick={() => setCurrency(c)} className={currency === c ? "rounded-sm bg-primary text-primary-foreground" : "rounded-sm text-muted-foreground"}>{c === "INR" ? "₹ India" : "$ International"}</Button>)}
+            </div>
+          </div>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {TIERS.map((tier, i) => <Reveal key={tier.name} delay={i * 0.06}><article className={`cinema-card flex h-full flex-col p-6 sm:p-7 ${tier.popular ? "border-primary/70" : ""}`}>
+              {tier.badge && <span className="mono-tag mb-4 w-fit border-b border-primary pb-2 text-primary">{tier.badge}</span>}
+              <h3 className="font-sans text-lg font-semibold leading-snug">{tier.name}</h3>
+              <p className="mt-5 font-display text-4xl"><span className="text-primary">{tier.price[currency]}</span></p>
+              <p className="mono-tag mt-2 text-muted-foreground">{tier.note}</p>
+              <ul className="mt-6 flex-1 space-y-3">{tier.features.map((feature) => <li key={feature} className="flex gap-3 text-sm leading-6 text-muted-foreground"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />{feature}</li>)}</ul>
+              <Button asChild className={`mt-8 h-auto rounded-sm px-5 py-3.5 ${tier.popular ? "bg-primary text-primary-foreground hover:bg-primary/90" : "border border-border bg-transparent text-foreground hover:border-primary"}`} variant={tier.popular ? "default" : "outline"}><a href="#contact">{tier.cta} <ArrowUpRight aria-hidden="true" /></a></Button>
+            </article></Reveal>)}
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="mx-auto grid max-w-7xl gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.7fr_1.3fr] lg:px-12">
+        <div><p className="mono-tag text-primary">A few useful answers</p><h2 className="mt-3 font-display text-4xl">Before we begin</h2></div>
+        <div className="divide-y divide-border border-y border-border">{FAQS.map(([question, answer]) => <details key={question} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden">{question}<span className="font-mono text-primary" aria-hidden="true">+</span></summary><p className="max-w-2xl pt-3 text-sm leading-7 text-muted-foreground">{answer}</p></details>)}</div>
+      </section>
+
+      <section id="contact" className="border-t border-border bg-card/40 py-20 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:px-12">
+          <div>
+            <p className="mono-tag text-primary">06 / Project brief</p>
+            <h2 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">Ready to give your next product story a better first three seconds?</h2>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-muted-foreground">Share your product and goal. You’ll hear directly from Kush with a proposed direction and timeline.</p>
+            <div className="mt-8 space-y-3 border-t border-border pt-5">
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><Mail aria-hidden="true" className="h-4 w-4" />{EMAIL}</a>
+              <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><MessageCircle aria-hidden="true" className="h-4 w-4" />WhatsApp · {PHONE_DISPLAY}</a>
+              <a href={PHONE_TEL} className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><Phone aria-hidden="true" className="h-4 w-4" />Call · {PHONE_DISPLAY}</a>
+              <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="flex items-center gap-3 py-3 text-sm transition-colors hover:text-primary">Instagram · @kushkumar.ai <ArrowUpRight aria-hidden="true" className="h-4 w-4" /></a>
+            </div>
+          </div>
+          <form onSubmit={handleSubmit} className="space-y-4 border-t border-border pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+            <label className="block"><span className="mono-tag text-muted-foreground">Your name</span><input required name="name" placeholder="Name" className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary" /></label>
+            <label className="block"><span className="mono-tag text-muted-foreground">Brand or product link</span><input required name="link" placeholder="Website / product URL" className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary" /></label>
+            <label className="block"><span className="mono-tag text-muted-foreground">What are you looking to make?</span><textarea required name="goal" rows={4} placeholder="Product, audience, and campaign goal" className="mt-2 w-full resize-y rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary" /></label>
+            <label className="block"><span className="mono-tag text-muted-foreground">Package</span><select required name="budget" defaultValue="" className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary"><option value="" disabled>Select a package</option><option value="validation">{currency === "INR" ? "₹3,499" : "$36.85"} — 48-hour 3-ad validation batch</option><option value="sprint">{currency === "INR" ? "₹18,000" : "$189.58"} — Starter 6-ad testing sprint</option><option value="retainer">{currency === "INR" ? "₹35,000/mo" : "$368.63/mo"} — 15-ad monthly retainer</option><option value="custom">Custom multi-SKU festive campaign</option></select></label>
+            <Button type="submit" className="h-auto w-full rounded-sm bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Send project brief <ArrowUpRight aria-hidden="true" /></Button>
+          </form>
+        </div>
+      </section>
+
+      <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-8 text-xs text-muted-foreground sm:px-8 lg:px-12">
+        <span>© 2026 Kush Kumar · D2C Video Ad & Commercial Studio</span>
+        <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="transition-colors hover:text-primary">Instagram · @kushkumar.ai</a>
       </footer>
     </main>
   );
