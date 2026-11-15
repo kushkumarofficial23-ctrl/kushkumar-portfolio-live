@@ -520,8 +520,8 @@ function Index() {
       </header>
 
       <section id="top" className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 pb-16 pt-12 sm:px-8 md:grid-cols-[1.08fr_0.92fr] md:gap-14 md:px-12 md:pb-24 md:pt-16">
+        <p className="md:col-span-2 text-center font-display text-4xl text-primary sm:text-5xl">KUSH KUMAR</p>
         <div className="relative z-10">
-          <p className="mono-tag mb-5 text-primary">KUSH KUMAR <span className="text-muted-foreground">/ Jaipur, India</span></p>
           <p className="mono-tag inline-flex items-center gap-2 border-l border-primary pl-3 text-primary"><Sparkles aria-hidden="true" className="h-3.5 w-3.5" />For founder-led D2C brands · No product shipping</p>
           <h1 className="mt-7 max-w-3xl font-sans text-4xl font-semibold leading-[1.08] sm:text-5xl lg:text-6xl">
             Turn 2–3 existing product photos into <em className="font-display font-normal text-primary">3 scroll-stopping 9:16 video ads</em> in 48 hours.
