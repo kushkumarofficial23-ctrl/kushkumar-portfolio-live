@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 type Props = {
   src: string;
   title: string;
@@ -8,7 +6,7 @@ type Props = {
   media?: "video" | "image";
 };
 
-export function VideoCard({ src, title, tag, metric, lens, media = "video" }: Props) {
+export function VideoCard({ src, title, tag, metric, media = "video" }: Props) {
   return (
     <article className="cinema-card group overflow-hidden transition-transform duration-500 hover:-translate-y-1">
       <div className="relative overflow-hidden">
