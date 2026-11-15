@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: oklch(0.16 0.012 55);
+  --foreground: oklch(0.94 0.018 78);
+  --card: oklch(0.2 0.014 55);
+  --card-foreground: oklch(0.94 0.018 78);
+  --popover: oklch(0.2 0.014 55);
+  --popover-foreground: oklch(0.94 0.018 78);
+  --primary: oklch(0.72 0.105 55);
+  --primary-foreground: oklch(0.16 0.012 55);
+  --secondary: oklch(0.27 0.018 58);
+  --secondary-foreground: oklch(0.92 0.018 78);
+  --muted: oklch(0.25 0.014 55);
+  --muted-foreground: oklch(0.72 0.018 72);
+  --accent: oklch(0.3 0.04 165);
+  --accent-foreground: oklch(0.94 0.018 78);
+  --destructive: oklch(0.62 0.19 25);
+  --destructive-foreground: oklch(0.98 0.005 80);
+  --border: oklch(0.35 0.018 60);
+  --input: oklch(0.35 0.018 60);
+  --ring: oklch(0.72 0.105 55);
+  --radius: 0.25rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Instrument Serif", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.editorial-page {
+  isolation: isolate;
+}
+
+.editorial-paper {
+  color-scheme: light;
+  --background: oklch(0.94 0.025 82);
+  --foreground: oklch(0.23 0.022 55);
+  --card: oklch(0.97 0.018 82);
+  --card-foreground: oklch(0.23 0.022 55);
+  --popover: oklch(0.97 0.018 82);
+  --popover-foreground: oklch(0.23 0.022 55);
+  --primary: oklch(0.49 0.095 49);
+  --primary-foreground: oklch(0.98 0.01 80);
+  --secondary: oklch(0.88 0.03 82);
+  --secondary-foreground: oklch(0.28 0.025 55);
+  --muted: oklch(0.89 0.025 82);
+  --muted-foreground: oklch(0.48 0.025 62);
+  --accent: oklch(0.83 0.05 155);
+  --accent-foreground: oklch(0.24 0.03 150);
+  --border: oklch(0.77 0.035 75);
+  --input: oklch(0.77 0.035 75);
+  --ring: oklch(0.49 0.095 49);
+  background: var(--background);
+}
+
+.cinema-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 14px 36px -28px oklch(0 0 0 / 75%);
+}
+
+.mono-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.67rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.live-dot {
+  flex: 0 0 auto;
+  background: oklch(0.7 0.12 155);
+  box-shadow: 0 0 0 3px oklch(0.7 0.12 155 / 15%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
