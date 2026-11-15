@@ -9,8 +9,6 @@ type Props = {
 };
 
 export function VideoCard({ src, title, tag, metric, lens, media = "video" }: Props) {
-  const ref = useRef<HTMLVideoElement>(null);
-
   return (
     <article className="cinema-card group overflow-hidden transition-transform duration-500 hover:-translate-y-1">
       <div className="relative overflow-hidden">
@@ -23,7 +21,6 @@ export function VideoCard({ src, title, tag, metric, lens, media = "video" }: Pr
           />
         ) : (
           <video
-            ref={ref}
             src={src}
             muted
             loop
@@ -40,9 +37,6 @@ export function VideoCard({ src, title, tag, metric, lens, media = "video" }: Pr
         <div className="mt-3 flex flex-wrap gap-x-3 gap-y-1 border-t border-border pt-3">
           <span className="mono-tag text-primary">{tag}</span>
           <span className="mono-tag text-muted-foreground">{metric}</span>
-        </div>
-        <div className="mono-tag mt-2 text-muted-foreground">
-          {media === "image" ? "Campaign still" : "Vertical commercial"}
         </div>
       </div>
     </article>
