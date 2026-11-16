@@ -470,7 +470,6 @@ const WHATSAPP = "https://wa.me/917073777605";
 const EMAIL = "kushkumarofficial06@gmail.com";
 const PHONE_DISPLAY = "+91 70737 77605";
 const PHONE_TEL = "tel:+917073777605";
-const INSTAGRAM = "https://www.instagram.com/kushkumar.ai/";
 
 const NAV_LINKS = [
   ["Selected Work", "#work"],
@@ -667,7 +666,6 @@ function Index() {
           <div className="mt-7 grid gap-3 border-t border-border pt-5 text-sm sm:grid-cols-2">
             <a className="transition-colors hover:text-primary" href={WHATSAPP} target="_blank" rel="noreferrer">WhatsApp · {PHONE_DISPLAY}</a>
             <a className="transition-colors hover:text-primary" href={`mailto:${EMAIL}`}>{EMAIL}</a>
-            <a className="transition-colors hover:text-primary" href={INSTAGRAM} target="_blank" rel="noreferrer">Instagram · @kushkumar.ai</a>
             <span className="text-muted-foreground">Jaipur, Rajasthan · Working with D2C brands worldwide</span>
           </div>
         </div>
@@ -709,7 +707,6 @@ function Index() {
               <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><Mail aria-hidden="true" className="h-4 w-4" />{EMAIL}</a>
               <a href={WHATSAPP} target="_blank" rel="noreferrer" className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><MessageCircle aria-hidden="true" className="h-4 w-4" />WhatsApp · {PHONE_DISPLAY}</a>
               <a href={PHONE_TEL} className="flex items-center gap-3 border-b border-border py-3 text-sm transition-colors hover:text-primary"><Phone aria-hidden="true" className="h-4 w-4" />Call · {PHONE_DISPLAY}</a>
-              <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="flex items-center gap-3 py-3 text-sm transition-colors hover:text-primary">Instagram · @kushkumar.ai <ArrowUpRight aria-hidden="true" className="h-4 w-4" /></a>
             </div>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4 border-t border-border pt-6 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
@@ -724,7 +721,6 @@ function Index() {
 
       <footer className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-8 text-xs text-muted-foreground sm:px-8 lg:px-12">
         <span>© 2026 Kush Kumar · D2C Video Ad & Commercial Studio</span>
-        <a href={INSTAGRAM} target="_blank" rel="noreferrer" className="transition-colors hover:text-primary">Instagram · @kushkumar.ai</a>
       </footer>
     </main>
   );
