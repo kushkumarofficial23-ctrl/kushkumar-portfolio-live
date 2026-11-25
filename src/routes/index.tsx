@@ -64,7 +64,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Kush Kumar — 48-Hour Commercial Studio" },
+      { title: "Kush Kumar — Performance Creative Studio" },
       {
         name: "description",
         content:
@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content: "Kush Kumar — 48-Hour Commercial Studio",
+        content: "Kush Kumar — Performance Creative Studio",
       },
       {
         property: "og:description",
@@ -80,7 +80,7 @@ export const Route = createFileRoute("/")({
           "A founder-led Jaipur studio turning existing product photography into polished vertical campaign films, delivered in 48 hours.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
 });

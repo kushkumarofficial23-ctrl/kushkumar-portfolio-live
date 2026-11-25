@@ -8,11 +8,10 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { Toaster } from "../components/ui/sonner";
-import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -39,9 +38,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -80,7 +76,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        title: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab",
+        title: "Kush Kumar — Performance Creative Studio",
       },
       {
         name: "description",
@@ -90,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Kush Kumar" },
       {
         property: "og:title",
-        content: "Kush Kumar — Performance Creative Studio & Hybrid Virtual Production Lab",
+        content: "Kush Kumar — Performance Creative Studio",
       },
       {
         property: "og:description",
@@ -98,9 +94,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "3 scroll-stopping 9:16 commercial video ads from your existing studio photos — delivered in 48 hours with 100% real product fidelity.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [
+      { rel: "icon", href: "data:," },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -110,6 +107,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+  }),
 
   shellComponent: RootShell,
   component: RootComponent,
